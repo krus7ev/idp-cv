@@ -1,0 +1,1326 @@
+[NVIDIA GeForce GTX 1070] (CC 6.1) < (7, 0) → defaulting to CPU
+Load pretrained SentenceTransformer: ibm-granite/granite-embedding-small-english-r2
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.81it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.59it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 42.85it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.05it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.73it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.21it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.66it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  8.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.40it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.80it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.13it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.76it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.99it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.62it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.09it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.42it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.76it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.82it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.99it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.06it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.79it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.60it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.12it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.63it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.50it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.76it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.73it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.31it/s][NVIDIA GeForce GTX 1070] (CC 6.1) < (7, 0) → defaulting to CPU
+Load pretrained SentenceTransformer: ibm-granite/granite-embedding-small-english-r2
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.08it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.90it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.93it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.61it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.30it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.17it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.65it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.47it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.34it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.49it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.49it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.29it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.13it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.30it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.82it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.59it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.06it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.79it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.68it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.39it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.79it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.36it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.17it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.38it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.27it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.80it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.07it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.68it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.50it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.71it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.39it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.27it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.07it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.95it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.55it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.71it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 10.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 13.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.59it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.97it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.13it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.55it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.71it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.41it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.23it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.95it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.51it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.39it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.40it/s]
+[NVIDIA GeForce GTX 1070] (CC 6.1) < (7, 0) → defaulting to CPU
+[32m[INFO] 2026-03-06 16:18:19,491 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:19,497 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:19,545 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:19,547 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:21,903 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:21,905 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:21,910 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:21,911 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:22,087 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:22,089 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:22,175 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_rec_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:22,177 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_rec_infer.pth[0m
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['item', 'desc', 'price', 'qty', 'line total']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'item': ['1', '2', '3'], 'desc': ['monitor', 'desk chair', 'laptop'], 'price': ['$346.87', '$488.03', '$187.53'], 'qty': ['7', '10', '7'], 'line total': ['$2428.09', '$4880.30', '$1312.71']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 16.45it/s]Mapping results: {'desc': {'best': ('desc', 1.0, 'lexical'), 'candidates': [('desc', 1.0, 'lexical')]}, 'price': {'best': ('price', 1.0, 'lexical'), 'candidates': [('price', 1.0, 'lexical')]}, 'qty': {'best': ('qty', 1.0, 'lexical'), 'candidates': [('qty', 1.0, 'lexical')]}, 'net': {'best': ('line total', 0.7, 'lexical'), 'candidates': [('line total', 0.7, 'lexical')]}}
+Mapped row: {'desc': 'monitor', 'price': '$346.87', 'qty': '7', 'net': '$2428.09'} to table line: description='monitor' quantity=7 unit_price=346.87 total_amount=None net_amount=2428.09 tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'desk chair', 'price': '$488.03', 'qty': '10', 'net': '$4880.30'} to table line: description='desk chair' quantity=10 unit_price=488.03 total_amount=None net_amount=4880.3 tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'laptop', 'price': '$187.53', 'qty': '7', 'net': '$1312.71'} to table line: description='laptop' quantity=7 unit_price=187.53 total_amount=None net_amount=1312.71 tax_amount=None tax_rate=None shipping_cost=None.
+Mapped 3 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.18it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.06it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 16.68it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.18it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.49it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 15.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.33it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.60it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.01it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  9.57it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 13.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 14.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 12.50it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  6.23it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 13.83it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 11.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 12.90it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 13.07it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 10.84it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  9.80it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 11.51it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 12.29it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 11.51it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 16.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  9.05it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  8.69it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 15.51it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  9.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 17.13it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.55it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 11.59it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.34it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.40it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.07it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.38it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.93it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.12it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.98it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.07it/s]Field Key Mapping Results:
+
+  - Field "subtotal" matched key "Subtotal:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Subtotal:' (1.00 [lexical]), 'Subtotal: $8621.10' (0.50 [lexical])
+
+  - Field "total" matched key "Total:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Total:' (1.00 [lexical]), 'Total: $9251.14' (0.40 [lexical]), 'Marine' (0.38 [lexical]), 'Industrial' (0.36 [lexical]), 'Marine Drive' (0.33 [lexical])
+
+  - Field "inv_no" matched key "Invoice #:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Invoice #:' (1.00 [lexical]), 'Invoice' (0.88 [lexical]), 'Invoice #: INV-6059' (0.53 [lexical]), 'INV-6059' (0.38 [lexical]), 'Oceanic' (0.36 [lexical])
+
+  - Field "order_id" matched key "To:" (score: 0.67 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'To:' (0.67 [lexical]), '#:' (0.33 [lexical]), 'Rd' (0.33 [lexical]), 'Corp.' (0.25 [lexical]), 'IL' (0.25 [lexical])
+
+  - Field "date" matched key "Date:" (score: 1.00 [lexical]) at 1 locations: group[1]
+
+    - Candidates considered:
+    'Date:' (1.00 [lexical]), 'INV-6059 Date:' (0.64 [lexical]), '#: INV-6059 Date:' (0.53 [lexical]), 'INV-6059 Date: 2025-07-25' (0.36 [lexical]), 'Marine Drive Miami,' (0.32 [lexical])
+
+  - Field "receiver" matched key "Bill To:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Bill To:' (1.00 [lexical]), 'Bill' (0.50 [lexical]), 'Rd Chicago,' (0.27 [lexical]), 'Miami, FL 33101' (0.20 [lexical])
+
+  => Unmatched Fields: due, tax_amount, tax_rate, shipping, issuer, issuer_tax, receiver_tax, issuer_addr, receiver_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'subtotal' (Key: 'Subtotal:')
+    - Strategy A ngram candidates: ['$8621.10']
+      [MATCH] Strategy A: Found value '8621.1' from '$8621.10'
+Field 'total' (Key: 'Total:')
+    - Strategy A ngram candidates: ['$9251.14']
+      [MATCH] Strategy A: Found value '9251.14' from '$9251.14'
+Field 'inv_no' (Key: 'Invoice #:')
+    - Strategy A ngram candidates: ['INV-6059 Date: 2025-07-25', 'INV-6059 Date:', 'INV-6059']
+      [MATCH] Strategy A: Found value 'INV-6059' from 'INV-6059'
+Field 'order_id' (Key: 'To:')
+    - Strategy B shortlist 1 candidates of group #1: ['Acme LLC 55 Industrial Rd Chicago, IL 60601']
+    - Strategy B ngram candidates: ['Acme LLC 55 Industrial Rd Chicago, IL 60601', 'Acme LLC 55 Industrial Rd Chicago,', 'Acme LLC 55 Industrial Rd', 'Acme LLC 55 Industrial', 'Acme LLC 55', 'Acme LLC', 'Acme']
+    - No value found across 1 key locations: [[('Bill To:', "g1: [(0, ['Oceanic', 'Corp.', 'Oceanic Corp.']), (1, ['101', 'Marine', 'Drive', 'Miami,', 'FL', '33101', '101 Marine', 'Marine Drive', 'Drive Miami,', 'Miami, FL', 'FL 33101', '101 Marine Drive', 'Marine Drive Miami,', 'Drive Miami, FL', 'Miami, FL 33101']), (2, ['Invoice', '#:', 'INV-6059', 'Date:', '2025-07-25', 'Invoice #:', '#: INV-6059', 'INV-6059 Date:', 'Date: 2025-07-25', 'Invoice #: INV-6059', '#: INV-6059 Date:', 'INV-6059 Date: 2025-07-25']), (3, ['Bill', 'To:', 'Bill To:']), (4, ['Acme', 'LLC', '55', 'Industrial', 'Rd', 'Chicago,', 'IL', '60601', 'Acme LLC', 'LLC 55', '55 Industrial', 'Industrial Rd', 'Rd Chicago,', 'Chicago, IL', 'IL 60601', 'Acme LLC 55', 'LLC 55 Industrial', '55 Industrial Rd', 'Industrial Rd Chicago,', 'Rd Chicago, IL', 'Chicago, IL 60601'])]")]]
+Field 'date' (Key: 'Date:')
+    - Strategy A ngram candidates: ['2025-07-25']
+      [MATCH] Strategy A: Found value '2025-07-25' from '2025-07-25'
+Field 'receiver' (Key: 'Bill To:')
+    - Strategy B shortlist 1 candidates of group #1: ['Acme LLC 55 Industrial Rd Chicago, IL 60601']
+    - Strategy B ngram candidates: ['Acme LLC 55 Industrial Rd Chicago, IL 60601', 'Acme LLC 55 Industrial Rd Chicago,', 'Acme LLC 55 Industrial Rd', 'Acme LLC 55 Industrial', 'Acme LLC 55', 'Acme LLC', 'Acme']
+      Rejected value candidate 'Acme LLC 55 Industrial Rd Chicago, IL 60601' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['GPE', 'CARDINAL', 'GPE', 'ORG']'
+      Rejected value candidate 'Acme LLC 55 Industrial Rd Chicago,' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['GPE', 'CARDINAL', 'GPE']'
+      Rejected value candidate 'Acme LLC 55 Industrial Rd' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['GPE', 'CARDINAL']'
+      Rejected value candidate 'Acme LLC 55 Industrial' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['GPE', 'CARDINAL']'
+      Rejected value candidate 'Acme LLC 55' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['GPE', 'CARDINAL']'
+      [MATCH] Strategy B: Found value 'Acme LLC' from 'Acme LLC'
+  Swapping order of 'issuer_addr' and 'receiver_addr' in missing fields
+  Swapping order of 'issuer_tax' and 'receiver_tax' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'receiver_addr', 'issuer_tax', 'receiver_tax', 'issuer', 'due', 'order_id']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['Oceanic Corp.', 'Corp.', 'Oceanic']
+      Rejected value candidate 'Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['101 Marine Drive Miami, FL 33101', 'Marine Drive Miami, FL 33101', '101 Marine Drive Miami, FL', 'Drive Miami, FL 33101', 'Marine Drive Miami, FL', '101 Marine Drive Miami,', 'Miami, FL 33101', 'Drive Miami, FL', 'Marine Drive Miami,', '101 Marine Drive', 'FL 33101', 'Miami, FL', 'Drive Miami,', 'Marine Drive', '101 Marine', '33101', 'FL', 'Miami,', 'Drive', 'Marine', '101']
+      [MATCH] Strategy C: Found value '101 Marine Drive Miami, FL 33101' from '101 Marine Drive Miami, FL 33101'
+Field 'receiver_addr':
+    - Strategy C ngram candidates: ['Oceanic Corp.', 'Corp.', 'Oceanic']
+      Rejected value candidate 'Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Bill']
+      Rejected value candidate 'Bill' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['55 Industrial Rd Chicago, IL 60601', 'Industrial Rd Chicago, IL 60601', '55 Industrial Rd Chicago, IL', 'Rd Chicago, IL 60601', 'Industrial Rd Chicago, IL', '55 Industrial Rd Chicago,', 'Chicago, IL 60601', 'Rd Chicago, IL', 'Industrial Rd Chicago,', '55 Industrial Rd', 'IL 60601', 'Chicago, IL', 'Rd Chicago,', 'Industrial Rd', '55 Industrial', '60601', 'IL', 'Chicago,', 'Rd', 'Industrial', '55']
+      [MATCH] Strategy C: Found value '55 Industrial Rd Chicago, IL 60601' from '55 Industrial Rd Chicago, IL 60601'
+Field 'issuer_tax':
+    - Strategy C ngram candidates: ['Oceanic Corp.', 'Corp.', 'Oceanic']
+    - Strategy C ngram candidates: ['Bill']
+Field 'receiver_tax':
+    - Strategy C ngram candidates: ['Oceanic Corp.', 'Corp.', 'Oceanic']
+    - Strategy C ngram candidates: ['Bill']
+Field 'issuer':
+    - Strategy C ngram candidates: ['Oceanic Corp.', 'Corp.', 'Oceanic']
+      [MATCH] Strategy C: Found value 'Oceanic Corp.' from 'Oceanic Corp.'
+Field 'due':
+    - Strategy C ngram candidates: ['Bill']
+Field 'order_id':
+    - Strategy C ngram candidates: ['Bill']
+Completed: inv1
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['#', 'item description', 'qty', 'total']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'#': ['1', '2', '3'], 'item description': ['keyboard', 'desk chair', 'software license'], 'qty': ['4', '7', '5'], 'total': ['$436.64', '$2377.34', '$272.15']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.73it/s]Mapping results: {'desc': {'best': ('item description', 1.0, 'lexical'), 'candidates': [('item description', 1.0, 'lexical')]}, 'qty': {'best': ('qty', 1.0, 'lexical'), 'candidates': [('qty', 1.0, 'lexical')]}, 'total': {'best': ('total', 1.0, 'lexical'), 'candidates': [('total', 1.0, 'lexical')]}}
+Mapped row: {'desc': 'keyboard', 'qty': '4', 'total': '$436.64'} to table line: description='keyboard' quantity=4 unit_price=None total_amount=436.64 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'desk chair', 'qty': '7', 'total': '$2377.34'} to table line: description='desk chair' quantity=7 unit_price=None total_amount=2377.34 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'software license', 'qty': '5', 'total': '$272.15'} to table line: description='software license' quantity=5 unit_price=None total_amount=272.15 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'laptop', 'qty': '4', 'total': '$1738.32'} to table line: description='laptop' quantity=4 unit_price=None total_amount=1738.32 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped 4 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.23it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.44it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.90it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.46it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.41it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.42it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.68it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.60it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.47it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.61it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.29it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.35it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.95it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.34it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.42it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.80it/s]Field Key Mapping Results:
+
+  - Field "subtotal" matched key "Subtotal:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Subtotal:' (1.00 [lexical]), 'Subtotal: $4824.45' (0.50 [lexical]), 'Subtotal: $4824.45 Tax' (0.41 [lexical])
+
+  - Field "tax_amount" matched key "Tax (7%):" (score: 0.80 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Tax (7%):' (0.80 [lexical]), 'Tax' (0.75 [lexical]), 'St' (0.50 [lexical]), 'TX' (0.50 [lexical]), 'Tax (7%): $337.71' (0.41 [lexical])
+
+  - Field "shipping" matched key "Shipping:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Shipping:' (1.00 [lexical]), 'Shipping: $13.33' (0.56 [lexical]), '$337.71 Shipping:' (0.53 [lexical]), 'Shipping: $13.33 Total:' (0.48 [lexical]), '(7%): $337.71 Shipping:' (0.39 [lexical])
+
+  - Field "total" matched key "Total:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Total:' (1.00 [lexical]), '$13.33 Total:' (0.54 [lexical]), 'Total: $5175.49' (0.40 [lexical]), '$13.33 Total: $5175.49' (0.32 [lexical])
+
+  => Unmatched Fields: inv_no, order_id, date, due, tax_rate, issuer, receiver, issuer_tax, receiver_tax, issuer_addr, receiver_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'subtotal' (Key: 'Subtotal:')
+    - Strategy A ngram candidates: ['$4824.45 Tax (7%): $337.71 Shipping: $13.33 Total: $5175.49', '$4824.45 Tax (7%): $337.71 Shipping: $13.33', '$4824.45 Tax (7%): $337.71 Shipping:', '$4824.45 Tax (7%): $337.71', '$4824.45 Tax (7%):', '$4824.45 Tax', '$4824.45']
+      Rejected value candidate '$4824.45 Tax (7%): $337.71 Shipping: $13.33 Total: $5175.49' - contains alias 'tax:'
+      Rejected value candidate '$4824.45 Tax (7%): $337.71 Shipping: $13.33' - contains alias 'tax:'
+      Rejected value candidate '$4824.45 Tax (7%): $337.71 Shipping:' - contains alias 'tax:'
+      Rejected value candidate '$4824.45 Tax (7%): $337.71' - contains alias 'tax:'
+      Rejected value candidate '$4824.45 Tax (7%):' - contains alias 'tax:'
+      Rejected value candidate '$4824.45 Tax' - contains alias 'tax:'
+      [MATCH] Strategy A: Found value '4824.45' from '$4824.45'
+Field 'tax_amount' (Key: 'Tax (7%):')
+    - Strategy A ngram candidates: ['$337.71 Shipping: $13.33 Total: $5175.49', '$337.71 Shipping: $13.33 Total:', '$337.71 Shipping: $13.33', '$337.71 Shipping:', '$337.71']
+
+      [MATCH] Strategy A: Found value '337.71' from '$337.71'
+Field 'shipping' (Key: 'Shipping:')
+    - Strategy A ngram candidates: ['$13.33 Total: $5175.49', '$13.33 Total:', '$13.33']
+      [MATCH] Strategy A: Found value '13.33' from '$13.33'
+Field 'total' (Key: 'Total:')
+    - Strategy A ngram candidates: ['$5175.49']
+      [MATCH] Strategy A: Found value '5175.49' from '$5175.49'
+  Swapping order of 'issuer' and 'receiver' in missing fields
+  Swapping order of 'issuer_addr' and 'receiver_addr' in missing fields
+  Swapping order of 'issuer_tax' and 'receiver_tax' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'receiver_addr', 'issuer_tax', 'receiver_tax', 'issuer', 'receiver', 'due', 'date', 'order_id', 'inv_no']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['Skyline Solutions', 'Solutions', 'Skyline']
+      Rejected value candidate 'Skyline Solutions' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Solutions' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Skyline' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['456 Cloud St Austin, TX 73301', 'Cloud St Austin, TX 73301', '456 Cloud St Austin, TX', 'St Austin, TX 73301', 'Cloud St Austin, TX', '456 Cloud St Austin,', 'Austin, TX 73301', 'St Austin, TX', 'Cloud St Austin,', '456 Cloud St', 'TX 73301', 'Austin, TX', 'St Austin,', 'Cloud St', '456 Cloud', '73301', 'TX', 'Austin,', 'St', 'Cloud', '456']
+      [MATCH] Strategy C: Found value '456 Cloud St Austin, TX 73301' from '456 Cloud St Austin, TX 73301'
+Field 'receiver_addr':
+    - Strategy C ngram candidates: ['Skyline Solutions', 'Solutions', 'Skyline']
+      Rejected value candidate 'Skyline Solutions' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Solutions' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Skyline' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+Field 'issuer_tax':
+    - Strategy C ngram candidates: ['Skyline Solutions', 'Solutions', 'Skyline']
+Field 'receiver_tax':
+    - Strategy C ngram candidates: ['Skyline Solutions', 'Solutions', 'Skyline']
+Field 'issuer':
+    - Strategy C ngram candidates: ['Skyline Solutions', 'Solutions', 'Skyline']
+      [MATCH] Strategy C: Found value 'Skyline Solutions' from 'Skyline Solutions'
+Field 'receiver':
+Field 'due':
+Field 'date':
+Field 'order_id':
+Field 'inv_no':
+Completed: inv2
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['no.', 'description', 'qty', 'um', 'netprice', 'networth', 'vat[%]', 'gross worth']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'no.': ['1.', '2.', '3.'], 'description': ['q&aaday:5-yearjournal', "poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew", "againstallodds:theuntold story of canada'sunlikely hockeyheroes"], 'qty': ['3,00', '5,00', '5,00'], 'um': ['each', 'each', 'each'], 'netprice': ['4,49', '64,95', '4,41'], 'networth': ['13,47', '324,75', '22,05'], 'vat[%]': ['10%', '10%', '10%'], 'gross worth': ['14,82', '357,23', '24,26']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.44it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  7.31it/s]
+Mapping results: {'price': {'best': ('netprice', 0.8888888888888888, 'lexical'), 'candidates': [('netprice', 0.8888888888888888, 'lexical'), ('no.', 0.2222222222222222, 'lexical')]}, 'desc': {'best': ('description', 1.0, 'lexical'), 'candidates': [('description', 1.0, 'lexical'), ('um', 0.25, 'lexical')]}, 'qty': {'best': ('qty', 1.0, 'lexical'), 'candidates': [('qty', 1.0, 'lexical')]}, 'net': {'best': ('networth', 0.8888888888888888, 'lexical'), 'candidates': [('networth', 0.8888888888888888, 'lexical')]}, 'tax_rate': {'best': ('vat[%]', 0.9916194081306458, 'semantic'), 'candidates': [('vat[%]', 0.9916194081306458, 'semantic')]}, 'total': {'best': ('gross worth', 0.9090909090909091, 'lexical'), 'candidates': [('gross worth', 0.9090909090909091, 'lexical')]}}
+Mapped row: {'desc': 'q&aaday:5-yearjournal', 'qty': '3,00', 'price': '4,49', 'net': '13,47', 'tax_rate': '10%', 'total': '14,82'} to table line: description='q&aaday:5-yearjournal' quantity=3 unit_price=4.49 total_amount=14.82 net_amount=13.47 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': "poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew", 'qty': '5,00', 'price': '64,95', 'net': '324,75', 'tax_rate': '10%', 'total': '357,23'} to table line: description="poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew" quantity=5 unit_price=64.95 total_amount=357.23 net_amount=324.75 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': "againstallodds:theuntold story of canada'sunlikely hockeyheroes", 'qty': '5,00', 'price': '4,41', 'net': '22,05', 'tax_rate': '10%', 'total': '24,26'} to table line: description="againstallodds:theuntold story of canada'sunlikely hockeyheroes" quantity=5 unit_price=4.41 total_amount=24.26 net_amount=22.05 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': 'enoughbyhelenroseveare', 'qty': '3,00', 'price': '8,86', 'net': '26,58', 'tax_rate': '10%', 'total': '29,24'} to table line: description='enoughbyhelenroseveare' quantity=3 unit_price=8.86 total_amount=29.24 net_amount=26.58 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': 'waterfowllllustrated', 'qty': '4,00', 'price': '5,80', 'net': '23,20', 'tax_rate': '10%', 'total': '25,52'} to table line: description='waterfowllllustrated' quantity=4 unit_price=5.8 total_amount=25.52 net_amount=23.2 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': 'themessiah', 'qty': '5,00', 'price': '4,49', 'net': '22,45', 'tax_rate': '10%', 'total': '24,70'} to table line: description='themessiah' quantity=5 unit_price=4.49 total_amount=24.7 net_amount=22.45 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped 6 lines for current table.
+Mapping table with columns: ['vat[%]', 'networth', 'vat', 'gross worth']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'vat[%]': ['10%', 'total'], 'networth': ['432,50', '$432,50'], 'vat': ['43,25', '$43,25'], 'gross worth': ['475,75', '$475,75']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.07it/s]Mapping results: {'tax_rate': {'best': ('vat[%]', 0.9916194081306458, 'semantic'), 'candidates': [('vat[%]', 0.9916194081306458, 'semantic')]}, 'net': {'best': ('networth', 0.8888888888888888, 'lexical'), 'candidates': [('networth', 0.8888888888888888, 'lexical')]}, 'tax': {'best': ('vat', 1.0, 'lexical'), 'candidates': [('vat', 1.0, 'lexical')]}, 'total': {'best': ('gross worth', 0.9090909090909091, 'lexical'), 'candidates': [('gross worth', 0.9090909090909091, 'lexical')]}}
+Mapped row: {'tax_rate': '10%', 'net': '432,50', 'tax': '43,25', 'total': '475,75'} to table line: description=None quantity=None unit_price=None total_amount=475.75 net_amount=432.5 tax_amount=43.25 tax_rate=10.0 shipping_cost=None.
+Mapped row: {'tax_rate': 'total', 'net': '$432,50', 'tax': '$43,25', 'total': '$475,75'} to table line: description=None quantity=None unit_price=None total_amount=475.75 net_amount=432.5 tax_amount=43.25 tax_rate=None shipping_cost=None.
+Mapped 2 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.29it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.62it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.90it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.46it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.89it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.07it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.05it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.99it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.33it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.65it/s]Field Key Mapping Results:
+
+  - Field "inv_no" matched key "Invoiceno:" (score: 0.91 [lexical]) at 1 locations: group[0]
+
+    - Candidates considered:
+    'Invoiceno:' (0.91 [lexical]), 'Invoiceno: 37535203' (0.47 [lexical]), 'IBAN:' (0.43 [lexical]), 'Miranda-Nielsen 8668RangelStravenueSuite392' (0.19 [lexical]), 'IBAN: GB30ICA043176037560423' (0.14 [lexical])
+
+  - Field "date" matched key "Date ofissue:" (score: 0.93 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Date ofissue:' (0.93 [lexical]), 'Date' (0.80 [lexical]), 'Pattonborough,Wi65859' (0.19 [lexical])
+
+  - Field "issuer" matched key "Seller:" (score: 1.00 [lexical]) at 1 locations: group[3]
+    - Candidates considered:
+    'Seller:' (1.00 [lexical]), 'ofissue:' (0.62 [lexical]), 'ITEMS' (0.29 [lexical])
+
+  - Field "issuer_tax" matched key "Taxld:" (score: 0.71 [lexical]) at 2 locations: group[1], group[2]
+
+  - Field "receiver" matched key "Client:" (score: 1.00 [lexical]) at 1 locations: group[3]
+
+  => Unmatched Fields: order_id, due, total, subtotal, tax_amount, tax_rate, shipping, receiver_tax, issuer_addr, receiver_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'inv_no' (Key: 'Invoiceno:')
+    - Strategy A ngram candidates: ['37535203']
+      [MATCH] Strategy A: Found value '37535203' from '37535203'
+Field 'date' (Key: 'Date ofissue:')
+    - Strategy B shortlist 1 candidates of group #0: ['07/13/2015']
+    - Strategy B ngram candidates: ['07/13/2015']
+      [MATCH] Strategy B: Found value '2015-07-13' from '07/13/2015'
+Field 'issuer' (Key: 'Seller:')
+    - Strategy B shortlist 3 candidates of group #3: ['Garcia-Burton 0340MoranPort Pattonborough,Wi65859', 'ITEMS', 'SUMMARY']
+    - Strategy B ngram candidates: ['Garcia-Burton 0340MoranPort Pattonborough,Wi65859', 'Garcia-Burton 0340MoranPort', 'Garcia-Burton']
+      Rejected value candidate 'Garcia-Burton 0340MoranPort Pattonborough,Wi65859' - Contains digit(s) - for field of value-type 'name'
+      Rejected value candidate 'Garcia-Burton 0340MoranPort' - Contains digit(s) - for field of value-type 'name'
+      [MATCH] Strategy B: Found value 'Garcia-Burton' from 'Garcia-Burton'
+Field 'issuer_tax' (Key: 'Taxld:')
+    - Strategy A ngram candidates: ['916-83-8601']
+      [MATCH] Strategy A: Found value '916-83-8601' from '916-83-8601'
+  Extra Field 'receiver_tax' (Key: 'Taxld:')
+    - Strategy A ngram candidates: ['989-84-4547']
+      [MATCH] Strategy A: Found value '989-84-4547' from '989-84-4547'
+Field 'receiver' (Key: 'Client:')
+    - Strategy B shortlist 1 candidates of group #3: ['Miranda-Nielsen 8668RangelStravenueSuite392 PortKristen,SD88510']
+    - Strategy B ngram candidates: ['Miranda-Nielsen 8668RangelStravenueSuite392 PortKristen,SD88510', 'Miranda-Nielsen 8668RangelStravenueSuite392', 'Miranda-Nielsen']
+      Rejected value candidate 'Miranda-Nielsen 8668RangelStravenueSuite392 PortKristen,SD88510' - Contains digit(s) - for field of value-type 'name'
+      Rejected value candidate 'Miranda-Nielsen 8668RangelStravenueSuite392' - Contains digit(s) - for field of value-type 'name'
+      [MATCH] Strategy B: Found value 'Miranda-Nielsen' from 'Miranda-Nielsen'
+  Swapping order of 'issuer_addr' and 'receiver_addr' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'receiver_addr', 'due', 'order_id']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['0340MoranPort Pattonborough,Wi65859', 'Pattonborough,Wi65859', '0340MoranPort']
+      [MATCH] Strategy C: Found value '0340MoranPort Pattonborough,Wi65859' from '0340MoranPort Pattonborough,Wi65859'
+Field 'receiver_addr':
+    - Strategy C ngram candidates: ['IBAN:GB30ICA043176037560423']
+      Rejected value candidate 'IBAN:GB30ICA043176037560423' - No alpha chars - for field of value-type 'address'
+    - Strategy C ngram candidates: ['ITEMS']
+      Rejected value candidate 'ITEMS' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['SUMMARY']
+      Rejected value candidate 'SUMMARY' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['8668RangelStravenueSuite392 PortKristen,SD88510', 'PortKristen,SD88510', '8668RangelStravenueSuite392']
+      [MATCH] Strategy C: Found value '8668RangelStravenueSuite392 PortKristen,SD88510' from '8668RangelStravenueSuite392 PortKristen,SD88510'
+Field 'due':
+    - Strategy C ngram candidates: ['IBAN:GB30ICA043176037560423']
+    - Strategy C ngram candidates: ['ITEMS']
+    - Strategy C ngram candidates: ['SUMMARY']
+Field 'order_id':
+    - Strategy C ngram candidates: ['IBAN:GB30ICA043176037560423']
+    - Strategy C ngram candidates: ['ITEMS']
+    - Strategy C ngram candidates: ['SUMMARY']
+Completed: inv3
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['no.', 'description', 'qty', 'um', 'netprice', 'networth', 'vat[%]', 'gross worth']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'no.': ['1.', '2.', '3.'], 'description': ['15"x15"whitemarble coffee top table filigree lapis inlay art christmas gift', '30x30"marbeblacktoptable semi precious bird art black friday gift decor', "15'xl5-white marblechess top table carnelian inlayart black friday gift deco"], 'qty': ['5,00', '5,00', '3,00'], 'um': ['each', 'each', 'each'], 'netprice': ["00'059", '2399,00', '600,00'], 'networth': ['3250.00', '11995.00', '1800,00'], 'vat[%]': ['10%', '10%', '10%'], 'gross worth': ['3575,00', '13194,50', '1980,00']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.68it/s]Mapping results: {'price': {'best': ('netprice', 0.8888888888888888, 'lexical'), 'candidates': [('netprice', 0.8888888888888888, 'lexical'), ('no.', 0.2222222222222222, 'lexical')]}, 'desc': {'best': ('description', 1.0, 'lexical'), 'candidates': [('description', 1.0, 'lexical'), ('um', 0.25, 'lexical')]}, 'qty': {'best': ('qty', 1.0, 'lexical'), 'candidates': [('qty', 1.0, 'lexical')]}, 'net': {'best': ('networth', 0.8888888888888888, 'lexical'), 'candidates': [('networth', 0.8888888888888888, 'lexical')]}, 'tax_rate': {'best': ('vat[%]', 0.9916194081306458, 'semantic'), 'candidates': [('vat[%]', 0.9916194081306458, 'semantic')]}, 'total': {'best': ('gross worth', 0.9090909090909091, 'lexical'), 'candidates': [('gross worth', 0.9090909090909091, 'lexical')]}}
+Mapped row: {'desc': '15"x15"whitemarble coffee top table filigree lapis inlay art christmas gift', 'qty': '5,00', 'price': "00'059", 'net': '3250.00', 'tax_rate': '10%', 'total': '3575,00'} to table line: description='15"x15"whitemarble coffee top table filigree lapis inlay art christmas gift' quantity=5 unit_price=59.0 total_amount=3575.0 net_amount=3250.0 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': '30x30"marbeblacktoptable semi precious bird art black friday gift decor', 'qty': '5,00', 'price': '2399,00', 'net': '11995.00', 'tax_rate': '10%', 'total': '13194,50'} to table line: description='30x30"marbeblacktoptable semi precious bird art black friday gift decor' quantity=5 unit_price=2399.0 total_amount=13194.5 net_amount=11995.0 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped row: {'desc': "15'xl5-white marblechess top table carnelian inlayart black friday gift deco", 'qty': '3,00', 'price': '600,00', 'net': '1800,00', 'tax_rate': '10%', 'total': '1980,00'} to table line: description="15'xl5-white marblechess top table carnelian inlayart black friday gift deco" quantity=3 unit_price=600.0 total_amount=1980.0 net_amount=1800.0 tax_amount=None tax_rate=10.0 shipping_cost=None.
+Mapped 3 lines for current table.
+Mapping table with columns: ['vat[%]', 'networth', 'vat', 'gross worth']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'vat[%]': ['10%', 'total'], 'networth': ['17045,00', '$17045,00'], 'vat': ['1704,50', '$1704,50'], 'gross worth': ['18749.50', '$18749,50']}
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.61it/s]Mapping results: {'tax_rate': {'best': ('vat[%]', 0.9916194081306458, 'semantic'), 'candidates': [('vat[%]', 0.9916194081306458, 'semantic')]}, 'net': {'best': ('networth', 0.8888888888888888, 'lexical'), 'candidates': [('networth', 0.8888888888888888, 'lexical')]}, 'tax': {'best': ('vat', 1.0, 'lexical'), 'candidates': [('vat', 1.0, 'lexical')]}, 'total': {'best': ('gross worth', 0.9090909090909091, 'lexical'), 'candidates': [('gross worth', 0.9090909090909091, 'lexical')]}}
+
+Mapped row: {'tax_rate': '10%', 'net': '17045,00', 'tax': '1704,50', 'total': '18749.50'} to table line: description=None quantity=None unit_price=None total_amount=18749.5 net_amount=17045.0 tax_amount=1704.5 tax_rate=10.0 shipping_cost=None.
+Mapped row: {'tax_rate': 'total', 'net': '$17045,00', 'tax': '$1704,50', 'total': '$18749,50'} to table line: description=None quantity=None unit_price=None total_amount=18749.5 net_amount=17045.0 tax_amount=1704.5 tax_rate=None shipping_cost=None.
+Mapped 2 lines for current table.
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.95it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.05it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.00it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.23it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.90it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.01it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.53it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.61it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.23it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.21it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.06it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.55it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.98it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.17it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.93it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.09it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.49it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.57it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 16.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.01it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.62it/s]Field Key Mapping Results:
+
+  - Field "inv_no" matched key "Invoiceno:" (score: 0.91 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Invoiceno:' (0.91 [lexical]), 'Invoiceno: 13310164' (0.47 [lexical]), 'IBAN:' (0.43 [lexical])
+
+  - Field "date" matched key "Date of issue:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Date of issue:' (1.00 [lexical]), 'Date' (0.80 [lexical]), 'of issue:' (0.64 [lexical]), 'Date of' (0.57 [lexical]), 'Campbell-Flores 34813DavisViews' (0.23 [lexical])
+
+  - Field "issuer" matched key "Seller:" (score: 1.00 [lexical]) at 1 locations: group[2]
+    - Candidates considered:
+    'Seller:' (1.00 [lexical]), 'issue:' (0.86 [lexical]), 'LLC' (0.29 [lexical]), 'ITEMS' (0.29 [lexical]), 'Campbell-Flores' (0.27 [lexical])
+
+  - Field "issuer_tax" matched key "Taxld:" (score: 0.71 [lexical]) at 2 locations: group[1], group[2]
+
+  - Field "receiver" matched key "Client:" (score: 1.00 [lexical]) at 1 locations: group[2]
+    - Candidates considered:
+    'Client:' (1.00 [lexical]), 'Montgomery' (0.50 [lexical]), 'Montgomery LLC' (0.36 [lexical])
+
+  => Unmatched Fields: order_id, due, total, subtotal, tax_amount, tax_rate, shipping, receiver_tax, issuer_addr, receiver_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'inv_no' (Key: 'Invoiceno:')
+    - Strategy A ngram candidates: ['13310164']
+
+      [MATCH] Strategy A: Found value '13310164' from '13310164'
+Field 'date' (Key: 'Date of issue:')
+    - Strategy B shortlist 1 candidates of group #0: ['01/16/2020']
+    - Strategy B ngram candidates: ['01/16/2020']
+      [MATCH] Strategy B: Found value '2020-01-16' from '01/16/2020'
+Field 'issuer' (Key: 'Seller:')
+    - Strategy B shortlist 3 candidates of group #2: ['Montgomery LLC 75081David Corners LakeKellyview,NH 03073', 'ITEMS', 'SUMMARY']
+    - Strategy B ngram candidates: ['Montgomery LLC 75081David Corners LakeKellyview,NH 03073', 'Montgomery LLC 75081David Corners LakeKellyview,NH', 'Montgomery LLC 75081David Corners', 'Montgomery LLC 75081David', 'Montgomery LLC', 'Montgomery']
+      Rejected value candidate 'Montgomery LLC 75081David Corners LakeKellyview,NH 03073' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Montgomery LLC 75081David Corners LakeKellyview,NH' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Montgomery LLC 75081David Corners' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Montgomery LLC 75081David' - Contains digit(s) - for field of value-type 'name'
+      [MATCH] Strategy B: Found value 'Montgomery LLC' from 'Montgomery LLC'
+Field 'issuer_tax' (Key: 'Taxld:')
+    - Strategy A ngram candidates: ['924-83-8802']
+      [MATCH] Strategy A: Found value '924-83-8802' from '924-83-8802'
+  Extra Field 'receiver_tax' (Key: 'Taxld:')
+    - Strategy A ngram candidates: ['999-80-5625']
+      [MATCH] Strategy A: Found value '999-80-5625' from '999-80-5625'
+Field 'receiver' (Key: 'Client:')
+    - Strategy B shortlist 1 candidates of group #2: ['Campbell-Flores 34813DavisViews Jasonhaven,M032671']
+    - Strategy B ngram candidates: ['Campbell-Flores 34813DavisViews Jasonhaven,M032671', 'Campbell-Flores 34813DavisViews', 'Campbell-Flores']
+      Rejected value candidate 'Campbell-Flores 34813DavisViews Jasonhaven,M032671' - Contains digit(s) - for field of value-type 'name'
+      Rejected value candidate 'Campbell-Flores 34813DavisViews' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['ORG', 'CARDINAL']'
+      [MATCH] Strategy B: Found value 'Campbell-Flores' from 'Campbell-Flores'
+  Swapping order of 'issuer_addr' and 'receiver_addr' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'receiver_addr', 'due', 'order_id']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['75081David Corners LakeKellyview,NH 03073', 'Corners LakeKellyview,NH 03073', '75081David Corners LakeKellyview,NH', 'LakeKellyview,NH 03073', 'Corners LakeKellyview,NH', '75081David Corners', '03073', 'LakeKellyview,NH', 'Corners', '75081David']
+      [MATCH] Strategy C: Found value '75081David Corners LakeKellyview,NH 03073' from '75081David Corners LakeKellyview,NH 03073'
+Field 'receiver_addr':
+    - Strategy C ngram candidates: ['IBAN:GB13LKIT26418644296553']
+      Rejected value candidate 'IBAN:GB13LKIT26418644296553' - No alpha chars - for field of value-type 'address'
+    - Strategy C ngram candidates: ['ITEMS']
+      Rejected value candidate 'ITEMS' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['SUMMARY']
+      Rejected value candidate 'SUMMARY' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['34813DavisViews Jasonhaven,M032671', 'Jasonhaven,M032671', '34813DavisViews']
+      [MATCH] Strategy C: Found value '34813DavisViews Jasonhaven,M032671' from '34813DavisViews Jasonhaven,M032671'
+Field 'due':
+    - Strategy C ngram candidates: ['IBAN:GB13LKIT26418644296553']
+    - Strategy C ngram candidates: ['ITEMS']
+    - Strategy C ngram candidates: ['SUMMARY']
+Field 'order_id':
+    - Strategy C ngram candidates: ['IBAN:GB13LKIT26418644296553']
+    - Strategy C ngram candidates: ['ITEMS']
+    - Strategy C ngram candidates: ['SUMMARY']
+Completed: inv4
+[32m[INFO] 2026-03-06 16:18:43,051 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:43,053 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:43,104 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:43,105 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:43,551 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:43,553 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:43,558 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:43,560 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:43,735 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-03-06 16:18:43,737 [RapidOCR] device_config.py:57: Using GPU device with ID: 0[0m
+[32m[INFO] 2026-03-06 16:18:43,826 [RapidOCR] download_file.py:60: File exists and is valid: /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_rec_infer.pth[0m
+[32m[INFO] 2026-03-06 16:18:43,828 [RapidOCR] main.py:50: Using /home/crus7ev/miniconda3/envs/idp_cv/lib/python3.10/site-packages/rapidocr/models/ch_PP-OCRv4_rec_infer.pth[0m
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['item', 'quantity', 'rate', 'amount']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'item': ['in55321', 'in77544', 'in55321'], 'quantity': ['3', '5', '10'], 'rate': ['$2.44', '$0.21', '$2.20'], 'amount': ['$7.32', '$1.05', '$22.00']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.98it/s]Mapping results: {'desc': {'best': ('item', 1.0, 'lexical'), 'candidates': [('item', 1.0, 'lexical')]}, 'qty': {'best': ('quantity', 1.0, 'lexical'), 'candidates': [('quantity', 1.0, 'lexical'), ('amount', 0.6666666666666667, 'lexical')]}, 'price': {'best': ('rate', 1.0, 'lexical'), 'candidates': [('rate', 1.0, 'lexical')]}}
+Mapped row: {'desc': 'in55321', 'qty': '3', 'price': '$2.44'} to table line: description='in55321' quantity=3 unit_price=2.44 total_amount=None net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'in77544', 'qty': '5', 'price': '$0.21'} to table line: description='in77544' quantity=5 unit_price=0.21 total_amount=None net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'in55321', 'qty': '10', 'price': '$2.20'} to table line: description='in55321' quantity=10 unit_price=2.2 total_amount=None net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped 3 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.55it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.95it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.46it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.82it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.01it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.09it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.09it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.81it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.73it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.97it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.18it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.78it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.79it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.74it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.34it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.63it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.81it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.80it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.85it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 37.21it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.84it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.83it/s]Field Key Mapping Results:
+
+  - Field "receiver" matched key "Bill To:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Bill To:' (1.00 [lexical]), 'Bill' (0.50 [lexical])
+
+  - Field "order_id" matched key "PO Number:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'PO Number:' (1.00 [lexical]), 'Number:' (0.70 [lexical]), 'To:' (0.67 [lexical]), 'PO' (0.67 [lexical]), 'Terms:' (0.38 [lexical])
+
+  - Field "date" matched key "Date:" (score: 1.00 [lexical]) at 2 locations: group[0], group[0]
+    - Candidates considered:
+    'Date:' (1.00 [lexical]), 'Due:' (0.60 [lexical]), 'Jane' (0.40 [lexical]), 'Doe,' (0.40 [lexical]), 'Doe' (0.40 [lexical])
+
+  - Field "total" matched key "Balance Due:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Balance Due:' (1.00 [lexical]), 'Total:' (1.00 [lexical]), 'Balance' (0.88 [lexical]), 'Jane Doe,' (0.50 [lexical]), 'John Doe' (0.40 [lexical])
+
+  - Field "tax_amount" matched key "Tax (20%):" (score: 0.80 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Tax (20%):' (0.80 [lexical]), 'Tax' (0.75 [lexical]), '(20%):' (0.40 [lexical]), '123,' (0.20 [lexical]), '8, 2025' (0.20 [lexical])
+
+  - Field "receiver_addr" matched key "Ship To:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Ship To:' (1.00 [lexical]), 'Ship' (0.50 [lexical]), '1234NA1' (0.17 [lexical])
+
+  - Field "subtotal" matched key "Subtotal:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Subtotal:' (1.00 [lexical]), 'NET 15' (0.40 [lexical]), 'NET' (0.30 [lexical]), 'Jul' (0.22 [lexical]), '# 1234NA1' (0.18 [lexical])
+
+
+  - Field "due" matched key "Due Date:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Due Date:' (1.00 [lexical]), 'Payment Terms:' (0.64 [lexical]), 'Payment' (0.64 [lexical]), 'Due' (0.43 [lexical]), 'Doe Electronics' (0.33 [lexical])
+
+  - Field "inv_no" matched key "INVOICE" (score: 0.88 [lexical]) at 1 locations: group[2]
+    - Candidates considered:
+    'INVOICE' (0.88 [lexical]), 'Electronics ltd.' (0.25 [lexical])
+
+  => Unmatched Fields: tax_rate, shipping, issuer, issuer_tax, receiver_tax, issuer_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'receiver' (Key: 'Bill To:')
+    - Strategy B shortlist 4 candidates of group #0: ['Jane Doe,', '123, Apple str.', 'Payment Terms:', 'NET 15']
+    - Strategy B ngram candidates: ['Jane Doe,', 'Jane']
+      [MATCH] Strategy B: Found value 'Jane Doe,' from 'Jane Doe,'
+Field 'order_id' (Key: 'PO Number:')
+    - Strategy B shortlist 1 candidates of group #0: ['PO-65652345']
+    - Strategy B ngram candidates: ['PO-65652345']
+      [MATCH] Strategy B: Found value 'PO-65652345' from 'PO-65652345'
+Field 'date' (Key: 'Date:')
+    - Strategy B shortlist 3 candidates of group #0: ['Payment Terms:', 'Due', 'Jul 8, 2025']
+    - Strategy B ngram candidates: ['Payment Terms:', 'Payment']
+    - Strategy B ngram candidates: ['Due']
+    - Strategy B ngram candidates: ['Jul 8, 2025', 'Jul 8,', 'Jul']
+      [MATCH] Strategy B: Found value '2025-07-08' from 'Jul 8, 2025'
+Field 'total' (Key: 'Balance Due:')
+    - Strategy B shortlist 1 candidates of group #0: ['$36.44']
+    - Strategy B ngram candidates: ['$36.44']
+      [MATCH] Strategy B: Found value '36.44' from '$36.44'
+Field 'tax_amount' (Key: 'Tax (20%):')
+    - Strategy B shortlist 2 candidates of group #1: ['Total:', '$6.07']
+    - Strategy B ngram candidates: ['Total:']
+      Rejected value candidate 'Total:' - matches 'total' field by 1.0
+    - Strategy B ngram candidates: ['$6.07']
+      [MATCH] Strategy B: Found value '6.07' from '$6.07'
+Field 'receiver_addr' (Key: 'Ship To:')
+    - Strategy B shortlist 4 candidates of group #0: ['Jane Doe,', '123, Apple str.', 'Payment Terms:', 'NET 15']
+    - Strategy B ngram candidates: ['Jane Doe,', 'Jane']
+      Rejected value candidate 'Jane Doe,' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Jane' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy B ngram candidates: ['123, Apple str.', '123, Apple', '123,']
+      [MATCH] Strategy B: Found value '123, Apple str.' from '123, Apple str.'
+  Extra Field 'issuer_addr' (Key: 'Ship To:')
+Field 'subtotal' (Key: 'Subtotal:')
+    - Strategy B shortlist 2 candidates of group #1: ['Total:', '$30.37']
+    - Strategy B ngram candidates: ['Total:']
+      Rejected value candidate 'Total:' - matches 'total' field by 1.0
+    - Strategy B ngram candidates: ['$30.37']
+      [MATCH] Strategy B: Found value '30.37' from '$30.37'
+Field 'due' (Key: 'Due Date:')
+    - Strategy B shortlist 1 candidates of group #0: ['Jul 16, 2025']
+    - Strategy B ngram candidates: ['Jul 16, 2025', 'Jul 16,', 'Jul']
+      [MATCH] Strategy B: Found value '2025-07-16' from 'Jul 16, 2025'
+Field 'inv_no' (Key: 'INVOICE')
+    - Strategy B shortlist 1 candidates of group #2: ['# 1234NA1']
+    - Strategy B ngram candidates: ['# 1234NA1', '#']
+      [MATCH] Strategy B: Found value '# 1234NA1' from '# 1234NA1'
+  Swapping order of 'issuer_tax' and 'receiver_tax' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'issuer_tax', 'receiver_tax', 'issuer']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['John Doe Electronics ltd.', 'Doe Electronics ltd.', 'John Doe Electronics', 'Electronics ltd.', 'Doe Electronics', 'John Doe', 'ltd.', 'Electronics', 'Doe', 'John']
+      Rejected value candidate 'John Doe Electronics ltd.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Doe Electronics ltd.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'John Doe Electronics' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Electronics ltd.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Doe Electronics' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'John Doe' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'ltd.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Electronics' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Doe' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'John' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['123, Apple str.', 'Apple str.', '123, Apple', 'str.', 'Apple', '123,']
+      [MATCH] Strategy C: Found value '123, Apple str.' from '123, Apple str.'
+  Skipping orphan '123, Apple str.' for 'issuer_addr' - duplicate of already extracted address
+Field 'issuer_tax':
+    - Strategy C ngram candidates: ['John Doe Electronics ltd.', 'Doe Electronics ltd.', 'John Doe Electronics', 'Electronics ltd.', 'Doe Electronics', 'John Doe', 'ltd.', 'Electronics', 'Doe', 'John']
+    - Strategy C ngram candidates: ['Jane Doe,', 'Doe,', 'Jane']
+    - Strategy C ngram candidates: ['NET 15', '15', 'NET']
+    - Strategy C ngram candidates: ['Payment Terms:', 'Terms:', 'Payment']
+    - Strategy C ngram candidates: ['Due']
+    - Strategy C ngram candidates: ['$36.44']
+    - Strategy C ngram candidates: ['Total:']
+      Rejected value candidate 'Total:' - matches 'total' field by 1.0
+Field 'receiver_tax':
+    - Strategy C ngram candidates: ['John Doe Electronics ltd.', 'Doe Electronics ltd.', 'John Doe Electronics', 'Electronics ltd.', 'Doe Electronics', 'John Doe', 'ltd.', 'Electronics', 'Doe', 'John']
+    - Strategy C ngram candidates: ['Jane Doe,', 'Doe,', 'Jane']
+    - Strategy C ngram candidates: ['NET 15', '15', 'NET']
+    - Strategy C ngram candidates: ['Payment Terms:', 'Terms:', 'Payment']
+    - Strategy C ngram candidates: ['Due']
+    - Strategy C ngram candidates: ['$36.44']
+    - Strategy C ngram candidates: ['Total:']
+      Rejected value candidate 'Total:' - matches 'total' field by 1.0
+Field 'issuer':
+    - Strategy C ngram candidates: ['John Doe Electronics ltd.', 'Doe Electronics ltd.', 'John Doe Electronics', 'Electronics ltd.', 'Doe Electronics', 'John Doe', 'ltd.', 'Electronics', 'Doe', 'John']
+      [MATCH] Strategy C: Found value 'John Doe Electronics ltd.' from 'John Doe Electronics ltd.'
+Completed: inv5
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['item', 'description', 'qty', 'uom', 'price', 'total']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'item': ['1', '2', '3'], 'description': ['monitor', 'monitor', 'keyboard'], 'qty': ['8', '9', '7'], 'uom': ['lic', 'pcs', 'pcs'], 'price': ['$396.27', '$379.15', '$110.73'], 'total': ['$3170.16', '$3412.35', '$775.11']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.78it/s]Mapping results: {'desc': {'best': ('description', 1.0, 'lexical'), 'candidates': [('description', 1.0, 'lexical'), ('uom', 0.25, 'lexical')]}, 'qty': {'best': ('qty', 1.0, 'lexical'), 'candidates': [('qty', 1.0, 'lexical')]}, 'price': {'best': ('price', 1.0, 'lexical'), 'candidates': [('price', 1.0, 'lexical')]}, 'total': {'best': ('total', 1.0, 'lexical'), 'candidates': [('total', 1.0, 'lexical')]}}
+Mapped row: {'desc': 'monitor', 'qty': '8', 'price': '$396.27', 'total': '$3170.16'} to table line: description='monitor' quantity=8 unit_price=396.27 total_amount=3170.16 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'monitor', 'qty': '9', 'price': '$379.15', 'total': '$3412.35'} to table line: description='monitor' quantity=9 unit_price=379.15 total_amount=3412.35 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'keyboard', 'qty': '7', 'price': '$110.73', 'total': '$775.11'} to table line: description='keyboard' quantity=7 unit_price=110.73 total_amount=775.11 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'keyboard', 'qty': '8', 'price': '$65.30', 'total': '$522.40'} to table line: description='keyboard' quantity=8 unit_price=65.3 total_amount=522.4 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'laptop', 'qty': '2', 'price': '$297.11', 'total': '$594.22'} to table line: description='laptop' quantity=2 unit_price=297.11 total_amount=594.22 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped row: {'desc': 'monitor', 'qty': '2', 'price': '$498.21', 'total': '$996.42'} to table line: description='monitor' quantity=2 unit_price=498.21 total_amount=996.42 net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Mapped 6 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.89it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.65it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.69it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.54it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.19it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.02it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.63it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.29it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.40it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.44it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.50it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.89it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.11it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.18it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.86it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.36it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.10it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.99it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.98it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.30it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.51it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.33it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.68it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.12it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.06it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.71it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.27it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.13it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.62it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.52it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 40.08it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.88it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.26it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.63it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.35it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.12it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.63it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.35it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.83it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.98it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.89it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  7.08it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.20it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.14it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.48it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.76it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.39it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.73it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.91it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.52it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.32it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 20.94it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.57it/s]Field Key Mapping Results:
+
+  - Field "subtotal" matched key "Subtotal:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Subtotal:' (1.00 [lexical]), 'Subtotal: $9470.66' (0.50 [lexical]), 'Subtotal: $9470.66 Tax' (0.41 [lexical]), 'Jane Smith 300' (0.29 [lexical])
+
+  - Field "tax_amount" matched key "Tax (7%):" (score: 0.80 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Tax (7%):' (0.80 [lexical]), 'Tax' (0.75 [lexical]), 'St' (0.50 [lexical]), 'Tax (7%): $662.95' (0.41 [lexical]), '(7%):' (0.40 [lexical])
+
+  - Field "shipping" matched key "Shipping:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Shipping:' (1.00 [lexical]), 'Shipping: $25.17' (0.56 [lexical]), '$662.95 Shipping:' (0.53 [lexical]), 'Shipping: $25.17 Total:' (0.48 [lexical]), 'Drive' (0.44 [lexical])
+
+  - Field "total" matched key "Total:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Total:' (1.00 [lexical]), 'Invoice - Oceanic' (0.59 [lexical]), '$25.17 Total:' (0.54 [lexical]), 'Jane Smith' (0.40 [lexical]), 'Total: $10158.78' (0.38 [lexical])
+
+  - Field "inv_no" matched key "Invoice #:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Invoice #:' (1.00 [lexical]), 'Invoice' (0.88 [lexical]), 'Invoice -' (0.80 [lexical]), 'Invoice #: INV-8114' (0.53 [lexical]), 'INV-8114' (0.38 [lexical])
+
+  - Field "order_id" matched key "PO:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'PO:' (1.00 [lexical]), 'To:' (0.67 [lexical]), '#:' (0.33 [lexical]), 'PO: PO-49113' (0.33 [lexical]), 'To: Jane Smith' (0.29 [lexical])
+
+  - Field "date" matched key "Date:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Date:' (1.00 [lexical]), 'INV-8114 Date:' (0.64 [lexical]), '#: INV-8114 Date:' (0.53 [lexical]), 'Jane' (0.40 [lexical]), 'Seattle,' (0.38 [lexical])
+
+  - Field "receiver" matched key "Bill To:" (score: 1.00 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Bill To:' (1.00 [lexical]), 'Bill To: Jane' (0.62 [lexical]), 'Bill' (0.50 [lexical]), 'Miami, FL 33101' (0.20 [lexical])
+
+  => Unmatched Fields: due, tax_rate, issuer, issuer_tax, receiver_tax, issuer_addr, receiver_addr
+
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'subtotal' (Key: 'Subtotal:')
+    - Strategy A ngram candidates: ['$9470.66 Tax (7%): $662.95 Shipping: $25.17 Total: $10158.78', '$9470.66 Tax (7%): $662.95 Shipping: $25.17', '$9470.66 Tax (7%): $662.95 Shipping:', '$9470.66 Tax (7%): $662.95', '$9470.66 Tax (7%):', '$9470.66 Tax', '$9470.66']
+      Rejected value candidate '$9470.66 Tax (7%): $662.95 Shipping: $25.17 Total: $10158.78' - contains alias 'tax:'
+      Rejected value candidate '$9470.66 Tax (7%): $662.95 Shipping: $25.17' - contains alias 'tax:'
+      Rejected value candidate '$9470.66 Tax (7%): $662.95 Shipping:' - contains alias 'tax:'
+      Rejected value candidate '$9470.66 Tax (7%): $662.95' - contains alias 'tax:'
+      Rejected value candidate '$9470.66 Tax (7%):' - contains alias 'tax:'
+      Rejected value candidate '$9470.66 Tax' - contains alias 'tax:'
+      [MATCH] Strategy A: Found value '9470.66' from '$9470.66'
+Field 'tax_amount' (Key: 'Tax (7%):')
+    - Strategy A ngram candidates: ['$662.95 Shipping: $25.17 Total: $10158.78', '$662.95 Shipping: $25.17 Total:', '$662.95 Shipping: $25.17', '$662.95 Shipping:', '$662.95']
+      [MATCH] Strategy A: Found value '662.95' from '$662.95'
+Field 'shipping' (Key: 'Shipping:')
+    - Strategy A ngram candidates: ['$25.17 Total: $10158.78', '$25.17 Total:', '$25.17']
+      [MATCH] Strategy A: Found value '25.17' from '$25.17'
+Field 'total' (Key: 'Total:')
+    - Strategy A ngram candidates: ['$10158.78']
+      [MATCH] Strategy A: Found value '10158.78' from '$10158.78'
+Field 'inv_no' (Key: 'Invoice #:')
+    - Strategy A ngram candidates: ['INV-8114 Date: 2025-07-05 PO: PO-49113', 'INV-8114 Date: 2025-07-05 PO:', 'INV-8114 Date: 2025-07-05', 'INV-8114 Date:', 'INV-8114']
+      [MATCH] Strategy A: Found value 'INV-8114' from 'INV-8114'
+Field 'order_id' (Key: 'PO:')
+    - Strategy A ngram candidates: ['PO-49113']
+      [MATCH] Strategy A: Found value 'PO-49113' from 'PO-49113'
+Field 'date' (Key: 'Date:')
+    - Strategy A ngram candidates: ['2025-07-05 PO: PO-49113', '2025-07-05 PO:', '2025-07-05']
+      [MATCH] Strategy A: Found value '2025-07-05' from '2025-07-05'
+Field 'receiver' (Key: 'Bill To:')
+    - Strategy A ngram candidates: ['Jane Smith 300 Elm St Seattle, WA 98101', 'Jane Smith 300 Elm St Seattle,', 'Jane Smith 300 Elm St', 'Jane Smith 300 Elm', 'Jane Smith 300', 'Jane Smith', 'Jane']
+      Rejected value candidate 'Jane Smith 300 Elm St Seattle, WA 98101' - Not all in {'ORG', 'GPE', 'NORP', 'PERSON'} - for field of value-type 'name: ['PERSON', 'GPE', 'GPE', 'GPE', 'DATE']'
+      Rejected value candidate 'Jane Smith 300 Elm St Seattle,' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Jane Smith 300 Elm St' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Jane Smith 300 Elm' - Too long to lack {'corp', 'inc', 'ltd', 'limited', 'llc', 'gmbh'} - for field of value-type 'name'
+      Rejected value candidate 'Jane Smith 300' - Contains digit(s) - for field of value-type 'name'
+      [MATCH] Strategy A: Found value 'Jane Smith' from 'Jane Smith'
+  Swapping order of 'issuer_addr' and 'receiver_addr' in missing fields
+  Swapping order of 'issuer_tax' and 'receiver_tax' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'receiver_addr', 'issuer_tax', 'receiver_tax', 'issuer', 'due']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['Invoice - Oceanic Corp.', '- Oceanic Corp.', 'Invoice - Oceanic', 'Oceanic Corp.', '- Oceanic', 'Invoice -', 'Corp.', 'Oceanic', '-', 'Invoice']
+      Rejected value candidate 'Invoice - Oceanic Corp.' - contains alias 'invoice:'
+      Rejected value candidate '- Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice - Oceanic' - contains alias 'invoice:'
+      Rejected value candidate 'Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate '- Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice -' - contains alias 'invoice:'
+      Rejected value candidate 'Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice' - contains alias 'invoice:'
+    - Strategy C ngram candidates: ['101 Marine Drive Miami, FL 33101', 'Marine Drive Miami, FL 33101', '101 Marine Drive Miami, FL', 'Drive Miami, FL 33101', 'Marine Drive Miami, FL', '101 Marine Drive Miami,', 'Miami, FL 33101', 'Drive Miami, FL', 'Marine Drive Miami,', '101 Marine Drive', 'FL 33101', 'Miami, FL', 'Drive Miami,', 'Marine Drive', '101 Marine', '33101', 'FL', 'Miami,', 'Drive', 'Marine', '101']
+      [MATCH] Strategy C: Found value '101 Marine Drive Miami, FL 33101' from '101 Marine Drive Miami, FL 33101'
+Field 'receiver_addr':
+    - Strategy C ngram candidates: ['Invoice - Oceanic Corp.', '- Oceanic Corp.', 'Invoice - Oceanic', 'Oceanic Corp.', '- Oceanic', 'Invoice -', 'Corp.', 'Oceanic', '-', 'Invoice']
+      Rejected value candidate 'Invoice - Oceanic Corp.' - contains alias 'invoice:'
+      Rejected value candidate '- Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice - Oceanic' - contains alias 'invoice:'
+      Rejected value candidate 'Oceanic Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate '- Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice -' - contains alias 'invoice:'
+      Rejected value candidate 'Corp.' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Oceanic' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Invoice' - contains alias 'invoice:'
+    - Strategy C ngram candidates: ['300 Elm St Seattle, WA 98101', 'Elm St Seattle, WA 98101', '300 Elm St Seattle, WA', 'St Seattle, WA 98101', 'Elm St Seattle, WA', '300 Elm St Seattle,', 'Seattle, WA 98101', 'St Seattle, WA', 'Elm St Seattle,', '300 Elm St', 'WA 98101', 'Seattle, WA', 'St Seattle,', 'Elm St', '300 Elm', '98101', 'WA', 'Seattle,', 'St', 'Elm', '300']
+      [MATCH] Strategy C: Found value '300 Elm St Seattle, WA 98101' from '300 Elm St Seattle, WA 98101'
+Field 'issuer_tax':
+    - Strategy C ngram candidates: ['Invoice - Oceanic Corp.', '- Oceanic Corp.', 'Invoice - Oceanic', 'Oceanic Corp.', '- Oceanic', 'Invoice -', 'Corp.', 'Oceanic', '-', 'Invoice']
+      Rejected value candidate 'Invoice - Oceanic Corp.' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice - Oceanic' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice -' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice' - contains alias 'invoice:'
+Field 'receiver_tax':
+    - Strategy C ngram candidates: ['Invoice - Oceanic Corp.', '- Oceanic Corp.', 'Invoice - Oceanic', 'Oceanic Corp.', '- Oceanic', 'Invoice -', 'Corp.', 'Oceanic', '-', 'Invoice']
+      Rejected value candidate 'Invoice - Oceanic Corp.' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice - Oceanic' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice -' - contains alias 'invoice:'
+      Rejected value candidate 'Invoice' - contains alias 'invoice:'
+Field 'issuer':
+    - Strategy C ngram candidates: ['Invoice - Oceanic Corp.', '- Oceanic Corp.', 'Invoice - Oceanic', 'Oceanic Corp.', '- Oceanic', 'Invoice -', 'Corp.', 'Oceanic', '-', 'Invoice']
+      Rejected value candidate 'Invoice - Oceanic Corp.' - contains alias 'invoice:'
+      [MATCH] Strategy C: Found value '- Oceanic Corp.' from '- Oceanic Corp.'
+Field 'due':
+    - Strategy C ngram candidates: ['Invoice']
+      Rejected value candidate 'Invoice' - contains alias 'invoice:'
+Completed: inv6
+Usage of TableItem.export_to_dataframe() without `doc` argument is deprecated.
+Mapping table with columns: ['item', 'quantity', 'rate', 'amount']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'item': ['okidata inkjet, durable', 'machines, technology, tec-ma-5501', ''], 'quantity': ['2', '', 'subtotal:'], 'rate': ['$625.02', '', ''], 'amount': ['$1,250.04', '', '$1,250.04']}
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.69it/s]Mapping results: {'desc': {'best': ('item', 1.0, 'lexical'), 'candidates': [('item', 1.0, 'lexical')]}, 'qty': {'best': ('quantity', 1.0, 'lexical'), 'candidates': [('quantity', 1.0, 'lexical'), ('amount', 0.6666666666666667, 'lexical')]}}
+Mapped row: {'desc': 'okidata inkjet, durable', 'qty': '2'} to table line: description='okidata inkjet, durable' quantity=2 unit_price=None total_amount=None net_amount=None tax_amount=None tax_rate=None shipping_cost=None.
+Skipping row due to validation error: 1 validation error for TableLine
+qty
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type
+Skipping row due to validation error: 1 validation error for TableLine
+qty
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type
+Skipping row due to validation error: 1 validation error for TableLine
+qty
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type
+Skipping row due to validation error: 1 validation error for TableLine
+qty
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type
+Mapped 1 lines for current table.
+Mapping table with columns: ['total:', 'shipping:', 'subtotal:']
+Using LexicalMapper with aliases: {'desc': ['description', 'desc', 'item description', 'service', 'product', 'details', 'item'], 'qty': ['quantity', 'qty', 'quant', 'units', 'count'], 'price': ['unit price', 'price', 'rate', 'unit cost', 'net price', 'cost per unit', 'cpu'], 'total': ['gross_worth', 'gross total', 'grand total', 'invoice total', 'total_worth', 'total amount', 'total due', 'balance due', 'total balance', 'total', 'balance', 'balance amount', 'full amount'], 'net': ['net worth', 'net amount', 'net total', 'subtotal', 'sub total', 'amount before tax'], 'tax': ['tax', 'vat', 'gst', 'tax amount', 'vat amount', 'gst amount', 'tax due', 'vat due', 'gst due', 'total tax'], 'tax_rate': ['tax (%)', 'vat (%)', 'gst (%)', 'tax %', 'vat %', 'gst %', 'tax rate', 'vat rate', 'gst rate'], 'shipping': ['shipping', 'delivery', 'freight', 'shipping cost', 'delivery cost', 'freight cost']}
+Using SemanticMapper with fields: ['desc', 'qty', 'price', 'total', 'net', 'tax', 'tax_rate', 'shipping']
+Sample data for validation: {'total:': ['$1,337.97'], 'shipping:': ['$87.93'], 'subtotal:': ['$1,250.04']}
+Mapping results: {'total': {'best': ('total:', 0.8333333333333334, 'lexical'), 'candidates': [('total:', 0.8333333333333334, 'lexical')]}, 'shipping': {'best': ('shipping:', 0.8888888888888888, 'lexical'), 'candidates': [('shipping:', 0.8888888888888888, 'lexical')]}, 'net': {'best': ('subtotal:', 0.8888888888888888, 'lexical'), 'candidates': [('subtotal:', 0.8888888888888888, 'lexical')]}}
+Mapped row: {'total': '$1,337.97', 'shipping': '$87.93', 'net': '$1,250.04'} to table line: description=None quantity=None unit_price=None total_amount=1337.97 net_amount=1250.04 tax_amount=None tax_rate=None shipping_cost=87.93.
+Mapped 1 lines for current table.
+
+Batches: 100%|██████████| 1/1 [00:00<00:00, 35.17it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.60it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.30it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.24it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.79it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.75it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.01it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.92it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.44it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.38it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.35it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.08it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.96it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 31.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.89it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.70it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 30.37it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.03it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.25it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 21.27it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 22.56it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.71it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 25.09it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.61it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.58it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.36it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.22it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.31it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.77it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.43it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.16it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.21it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 34.04it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 38.72it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 36.45it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.28it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.87it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 18.15it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 19.27it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.42it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.67it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.40it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 23.69it/s]Field Key Mapping Results:
+
+  - Field "receiver" matched key "Bill To:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Bill To:' (1.00 [lexical]), 'Bill' (0.50 [lexical]), 'Huston' (0.44 [lexical]), 'Crewe, England,' (0.33 [lexical]), 'Crewe,' (0.29 [lexical])
+
+  - Field "order_id" matched key "Order ID :" (score: 0.90 [lexical]) at 1 locations: group[1]
+    - Candidates considered:
+    'Order ID :' (0.90 [lexical]), 'Order ID' (0.89 [lexical]), 'To:' (0.67 [lexical]), 'Mode:' (0.50 [lexical]), 'ID' (0.50 [lexical])
+
+  - Field "receiver_addr" matched key "Ship To:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Ship To:' (1.00 [lexical]), 'Ship Mode:' (0.70 [lexical]), 'Ship' (0.50 [lexical]), 'Apr' (0.40 [lexical]), 'business!' (0.38 [lexical])
+
+  - Field "inv_no" matched key "INVOICE" (score: 0.88 [lexical]) at 1 locations: group[2]
+    - Candidates considered:
+    'INVOICE' (0.88 [lexical]), 'United' (0.38 [lexical]), 'Thanks for' (0.30 [lexical]), 'Kingdom' (0.29 [lexical]), 'United Kingdom' (0.29 [lexical])
+
+  - Field "total" matched key "Balance Due:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Balance Due:' (1.00 [lexical]), 'Balance' (0.88 [lexical]), 'England, United' (0.33 [lexical])
+
+  - Field "date" matched key "Date:" (score: 1.00 [lexical]) at 1 locations: group[0]
+    - Candidates considered:
+    'Date:' (1.00 [lexical]), 'Due:' (0.60 [lexical]), 'Notes:' (0.50 [lexical]), 'Apr 13 2012' (0.21 [lexical])
+
+  => Unmatched Fields: due, subtotal, tax_amount, tax_rate, shipping, issuer, issuer_tax, receiver_tax, issuer_addr
+
+Resolving field values (Strategy A: same-text RHS; B: Neighbour texts in group):
+Field 'receiver' (Key: 'Bill To:')
+    - Strategy B shortlist 3 candidates of group #0: ['John Huston', 'Ship Mode:', 'Standard Class']
+    - Strategy B ngram candidates: ['John Huston', 'John']
+      [MATCH] Strategy B: Found value 'John Huston' from 'John Huston'
+Field 'order_id' (Key: 'Order ID :')
+    - Strategy A ngram candidates: ['ES-2012-JH15820139-41012']
+
+      [MATCH] Strategy A: Found value 'ES-2012-JH15820139-41012' from 'ES-2012-JH15820139-41012'
+Field 'receiver_addr' (Key: 'Ship To:')
+    - Strategy B shortlist 3 candidates of group #0: ['Crewe, England, United Kingdom', 'Ship Mode:', 'Standard Class']
+    - Strategy B ngram candidates: ['Crewe, England, United Kingdom', 'Crewe, England, United', 'Crewe, England,', 'Crewe,']
+      [MATCH] Strategy B: Found value 'Crewe, England, United Kingdom' from 'Crewe, England, United Kingdom'
+  Extra Field 'issuer_addr' (Key: 'Ship To:')
+Field 'inv_no' (Key: 'INVOICE')
+    - Strategy B shortlist 1 candidates of group #2: ['# 16892']
+    - Strategy B ngram candidates: ['# 16892', '#']
+      [MATCH] Strategy B: Found value '# 16892' from '# 16892'
+Field 'total' (Key: 'Balance Due:')
+    - Strategy B shortlist 1 candidates of group #0: ['$1,337.97']
+    - Strategy B ngram candidates: ['$1,337.97']
+      [MATCH] Strategy B: Found value '1337.97' from '$1,337.97'
+Field 'date' (Key: 'Date:')
+    - Strategy B shortlist 2 candidates of group #0: ['Ship Mode:', 'Apr 13 2012']
+    - Strategy B ngram candidates: ['Ship Mode:', 'Ship']
+    - Strategy B ngram candidates: ['Apr 13 2012', 'Apr 13', 'Apr']
+      [MATCH] Strategy B: Found value '2012-04-13' from 'Apr 13 2012'
+  Swapping order of 'issuer_tax' and 'receiver_tax' in missing fields
+Strategy C: Attempting orphan-value recovery for missing fields: ['issuer_addr', 'issuer_tax', 'receiver_tax', 'issuer', 'due']
+Field 'issuer_addr':
+    - Strategy C ngram candidates: ['SuperStore']
+      Rejected value candidate 'SuperStore' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Standard Class', 'Class', 'Standard']
+      Rejected value candidate 'Standard Class' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Class' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Standard' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Ship Mode:', 'Mode:', 'Ship']
+      Rejected value candidate 'Ship Mode:' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'Mode:' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'Ship' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Notes:']
+      Rejected value candidate 'Notes:' - No alpha chars - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Thanks for your business!', 'for your business!', 'Thanks for your', 'your business!', 'for your', 'Thanks for', 'business!', 'your', 'for', 'Thanks']
+      Rejected value candidate 'Thanks for your business!' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'for your business!' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'Thanks for your' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'your business!' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'for your' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Thanks for' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'business!' - No alpha chars - for field of value-type 'address'
+      Rejected value candidate 'your' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'for' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+      Rejected value candidate 'Thanks' - No digit for address and not enough entities in {'GPE', 'LOC', 'FAC'} - for field of value-type 'address'
+    - Strategy C ngram candidates: ['Terms:']
+      Rejected value candidate 'Terms:' - No alpha chars - for field of value-type 'address'
+Field 'issuer_tax':
+    - Strategy C ngram candidates: ['SuperStore']
+    - Strategy C ngram candidates: ['Standard Class', 'Class', 'Standard']
+    - Strategy C ngram candidates: ['Ship Mode:', 'Mode:', 'Ship']
+    - Strategy C ngram candidates: ['Notes:']
+    - Strategy C ngram candidates: ['Thanks for your business!', 'for your business!', 'Thanks for your', 'your business!', 'for your', 'Thanks for', 'business!', 'your', 'for', 'Thanks']
+    - Strategy C ngram candidates: ['Terms:']
+Field 'receiver_tax':
+    - Strategy C ngram candidates: ['SuperStore']
+    - Strategy C ngram candidates: ['Standard Class', 'Class', 'Standard']
+    - Strategy C ngram candidates: ['Ship Mode:', 'Mode:', 'Ship']
+    - Strategy C ngram candidates: ['Notes:']
+    - Strategy C ngram candidates: ['Thanks for your business!', 'for your business!', 'Thanks for your', 'your business!', 'for your', 'Thanks for', 'business!', 'your', 'for', 'Thanks']
+    - Strategy C ngram candidates: ['Terms:']
+Field 'issuer':
+    - Strategy C ngram candidates: ['SuperStore']
+      [MATCH] Strategy C: Found value 'SuperStore' from 'SuperStore'
+Field 'due':
+    - Strategy C ngram candidates: ['Standard Class', 'Class', 'Standard']
+    - Strategy C ngram candidates: ['Ship Mode:', 'Mode:', 'Ship']
+    - Strategy C ngram candidates: ['Notes:']
+    - Strategy C ngram candidates: ['Thanks for your business!', 'for your business!', 'Thanks for your', 'your business!', 'for your', 'Thanks for', 'business!', 'your', 'for', 'Thanks']
+    - Strategy C ngram candidates: ['Terms:']
+Completed: inv7
