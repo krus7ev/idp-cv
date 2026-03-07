@@ -1,0 +1,26 @@
+# IDP-CV Requirements
+# Default CPU setup with latest working versions (as of 2026)
+
+# PyTorch (CPU version) using the extra index URL
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.10.0
+torchvision>=0.25.0
+
+# NLP & Document Processing
+spacy>=3.8.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl
+docling>=2.74.0
+sentence-transformers>=3.4.0
+transformers>=4.40.0
+onnxruntime>=1.15.0
+
+# Dependencies found in code
+pandas>=2.2.0
+python-dateutil>=2.8.2
+python-dotenv>=1.0.0
+openpyxl>=3.1.2
+pillow>=10.2.0
+
+# Note: Python 3.14 compatibility:
+# Current versions of spacy/confection depend on pydantic.v1 which has issues on Python 3.14.
+# Recommended Python version: 3.13

@@ -3,7 +3,7 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "Q"]
-ignore = ["E203"]
+ignore = ["E203", "E201", "E202", "E402"]
 
 [tool.ruff.lint.flake8-quotes]
 inline-quotes = "single"

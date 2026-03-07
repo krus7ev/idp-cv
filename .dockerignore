@@ -1,0 +1,9 @@
+__pycache__
+.pytest_cache
+*.pyc
+idp_cv.egg-info/
+.git
+.gitignore
+data/example_invoices/idp-cv_outputs/
+data/example_invoices/idp-cv_outputs_script/
+*.ipynb
