@@ -13,7 +13,6 @@ from typing import (
 )
 
 import spacy
-import torch
 from dateutil import parser as date_parser
 from pydantic import BaseModel
 from pydantic.fields import FieldInfo
@@ -66,14 +65,12 @@ class DocumentFieldExtractor:
         smapper: SemanticMapper,
         lmapper: LexicalMapper,
         ner: spacy.Language,
-        device: str,
         threshold: float,
     ):
         self.fields = fields
         self.smapper = smapper
         self.lmapper = lmapper
         self.ner = ner
-        self.device = device
         self.threshold = threshold
 
         self.field_value_types: Dict[str, str] = {}
@@ -601,7 +598,7 @@ class DocumentFieldExtractor:
         fields = schema if isinstance(schema, Sequence) else list(schema.model_fields.values())
 
         if device != 'cpu':
-            device = torch.device(check_gpu_compatibility(device))
+            device = check_gpu_compatibility(device)
 
         if smapper is None:
             smapper = SemanticMapper.create(fields, device=device)
@@ -610,7 +607,7 @@ class DocumentFieldExtractor:
         if ner is None:
             ner = spacy.load('en_core_web_md')
 
-        return cls(fields, smapper, lmapper, ner, device, threshold)
+        return cls(fields, smapper, lmapper, ner, threshold)
 
 
 def extract_invoice_summary(

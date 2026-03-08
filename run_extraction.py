@@ -59,7 +59,7 @@ from idp_cv.parse import (
     map_table_to_line_items,
 )
 from idp_cv.schemas import InvoiceSummary, TableLine
-from idp_cv.utils import draw_page_items, extract_clean_table_data
+from idp_cv.utils import draw_page_items, extract_clean_table_data, load_embedding_model
 
 # Logger configuration
 logging.basicConfig(level=logging.INFO, format='%(message)s', stream=sys.stdout, force=True)
@@ -67,6 +67,9 @@ logging.getLogger('RapidOCR').setLevel(logging.WARNING)
 logging.getLogger('docling').setLevel(logging.WARNING)
 logging.getLogger('idp_cv').setLevel(logging.DEBUG)
 warnings.filterwarnings('ignore', category=UserWarning, module='docling')
+
+
+logger = logging.getLogger(__name__)
 
 
 def process_and_extract_results(
@@ -78,13 +81,12 @@ def process_and_extract_results(
     os.makedirs(output_dir, exist_ok=True)
 
     # Pipeline and Converter init
-    # NOTE: Using 'onnx' backend for faster CPU inference
     pipeline_options = PdfPipelineOptions(
         accelerator_options=AcceleratorOptions(device=device),
         generate_page_images=do_viz,
         images_scale=2.0 if do_viz else 1.0,
         do_ocr=True,
-        ocr_options=RapidOcrOptions(backend='onnxruntime', print_verbose=False),
+        ocr_options=RapidOcrOptions(backend='onnxruntime' if device == 'cpu' else 'torch', print_verbose=False),
         do_table_structure=True,
         force_backend_text=False,
         generate_parsed_pages=True,
@@ -95,19 +97,15 @@ def process_and_extract_results(
             InputFormat.IMAGE: ImageFormatOption(pipeline_options=pipeline_options),
         }
     )
-
-    # Initialize table and summary schemas
-    table_schema_fields = list(TableLine.model_fields.values())
-    summary_schema_fields = list(InvoiceSummary.model_fields.values())
-
-    # Pre-initialize Mappers/NER
-    table_lex_mapper = LexicalMapper.create(table_schema_fields)
-    summary_lex_mapper = LexicalMapper.create(summary_schema_fields)
-
-    table_sem_mapper = SemanticMapper.create(table_schema_fields, device=device)
-    summary_sem_mapper = SemanticMapper.create(summary_schema_fields, device=device)
-
+    # Iinitialize ML models and label mappers (embeddings/NER)
     ner = spacy.load('en_core_web_md')
+    embedding_model, device = load_embedding_model(device=device)
+
+    table_sem_mapper = SemanticMapper.create(TableLine, model_or_id=embedding_model, device=device)
+    summary_sem_mapper = SemanticMapper.create(InvoiceSummary, model_or_id=embedding_model, device=device)
+
+    table_lex_mapper = LexicalMapper.create(TableLine)
+    summary_lex_mapper = LexicalMapper.create(InvoiceSummary)
 
     extractor = DocumentFieldExtractor.create(
         schema=InvoiceSummary,
@@ -118,21 +116,18 @@ def process_and_extract_results(
         threshold=0.5,
     )
 
-    # Execution
     files_to_process = sorted([f for f in input_dir.glob('*') if f.suffix.lower() in SUPPORTED_FORMATS])
-
     if not files_to_process:
-        print(f'No supported documents found in {input_dir}')
+        logger.info(f'No supported documents found in {input_dir}')
         return []
 
-    print(f'Found {len(files_to_process)} files to process in {input_dir}')
+    logger.info(f'Found {len(files_to_process)} files to process in {input_dir}')
     conv_results = converter.convert_all(files_to_process)
 
     final_results = []
-
     for result in conv_results:
         if result.status != 'success':
-            print(f'Failed: {result.input.file.name}')
+            logger.info(f'Failed: {result.input.file.name}')
             continue
 
         doc = result.document
@@ -181,12 +176,12 @@ def process_and_extract_results(
                 summary = extract_invoice_summary(doc, extractor=extractor)
                 doc_entry['summary'] = summary.model_dump(exclude_none=False)
             except Exception as e:
-                print(f'[{stem}] Summary error: {e}')
+                logger.info(f'[{stem}] Summary error: {e}')
                 traceback.print_exc()
 
         if 'summary_table' in doc_entry:
             for field in ['total_amount', 'net_amount', 'tax_amount', 'tax_rate', 'shipping_cost']:
-                if 'summary' in doc_entry and not getattr(summary, field, None):
+                if doc_entry.get('summary') and not getattr(summary, field):
                     for summary_row in doc_entry['summary_table'][0]:
                         field_value = getattr(summary_row, field)
                         if field_value:
@@ -195,7 +190,7 @@ def process_and_extract_results(
                             doc_entry['summary'][field] = field_value
 
         final_results.append(doc_entry)
-        print(f'Completed: {stem}')
+        logger.info(f'Completed: {stem}')
 
     return final_results
 
@@ -236,7 +231,7 @@ def main():
     if device is None:
         device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
-    print(f'Using device: {device}')
+    logger.info(f'Using device: {device}')
 
     # docling runtime settings
     settings.perf.doc_batch_concurrency = args.batch_concurrency
@@ -259,7 +254,7 @@ def main():
             entry['Document'] = res['Document']
             summary_data.append(entry)
 
-    print('\n--- Processing Complete ---')
+    logger.info('\n--- Processing Complete ---')
     if summary_data:
         df = pd.DataFrame(summary_data)
         cols = ['Document'] + [c for c in df.columns if c != 'Document']
@@ -268,9 +263,9 @@ def main():
         # Save overarching summary to CSV
         summary_csv = args.output / 'invoices_summary.csv'
         df.to_csv(summary_csv)
-        print(f'Summary saved to {summary_csv}')
+        logger.info(f'Summary saved to {summary_csv}')
     else:
-        print('No summary results generated.')
+        logger.info('No summary results generated.')
 
 
 if __name__ == '__main__':

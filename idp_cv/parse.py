@@ -1,5 +1,4 @@
 import logging
-import os
 import re
 from collections import defaultdict
 from typing import (
@@ -23,7 +22,7 @@ from .types import (
     FieldMappingResult,
 )
 from .utils import (
-    check_gpu_compatibility,
+    load_embedding_model,
     normalize_text,
 )
 
@@ -104,21 +103,25 @@ class LexicalMapper:
         return best_field, best_score
 
     @classmethod
-    def create(cls, fields) -> Optional['LexicalMapper']:
-        if not fields or not isinstance(fields, Sequence) or not isinstance(fields[0], FieldInfo):
+    def create(cls, schema) -> Optional['LexicalMapper']:
+        if not schema or (
+            not (isinstance(schema, type) and issubclass(schema, BaseModel))
+            and not (isinstance(schema, Sequence) and isinstance(schema[0], FieldInfo))
+        ):
             return
+        fields = schema if isinstance(schema, Sequence) else list(schema.model_fields.values())
+
         return cls(fields)
 
 
 class SemanticMapper:
     """Semantic field matcher using embedding-based similarity."""
 
-    def __init__(self, fields: Sequence[FieldInfo], model: SentenceTransformer, normalize: bool, device: str):
+    def __init__(self, fields: Sequence[FieldInfo], model: SentenceTransformer, normalize: bool):
         """Initialize mapper with field schema."""
         self.fields = fields
         self.model = model
         self.normalize = normalize
-        self.device = device
 
         self.field_embeddings: Dict[str, List[torch.Tensor]] = {}
         self.set_embeddings()
@@ -167,28 +170,26 @@ class SemanticMapper:
         return fields_idx[best_alias_id], self.normalize_sim(similarities[best_alias_id].item())
 
     @classmethod
-    def create(cls, fields, model_id=None, normalize=False, device='cpu') -> Optional['SemanticMapper']:
-        if not fields or not isinstance(fields, Sequence) or not isinstance(fields[0], FieldInfo):
+    def create(cls, schema, model_or_id=None, normalize=False, device='cpu') -> Optional['SemanticMapper']:
+        if not schema or (
+            not (isinstance(schema, type) and issubclass(schema, BaseModel))
+            and not (isinstance(schema, Sequence) and isinstance(schema[0], FieldInfo))
+        ):
             return
+        fields = schema if isinstance(schema, Sequence) else list(schema.model_fields.values())
 
-        if device != 'cpu':
-            device = torch.device(check_gpu_compatibility(device))
+        device = device or 'cpu'
+        model, model_id = None, DEFAULT_GRANITE_MODEL_ID
+        if model_or_id:
+            if isinstance(model_or_id, str):
+                model_id = model_or_id
+            elif isinstance(model_or_id, SentenceTransformer):
+                model = model_or_id
 
-        model_id = model_id or DEFAULT_GRANITE_MODEL_ID
+        if model is None:
+            model, _ = load_embedding_model(model_id=model_id, device=device)
 
-        local_files_only = os.environ.get('TRANSFORMERS_OFFLINE', '0') == '1'
-        try:
-            model = SentenceTransformer(model_id, device=device, local_files_only=local_files_only)
-        except Exception as e:
-            if not local_files_only:
-                logger.warning(
-                    f"Could not load model '{model_id}' from HuggingFace (Network error?). Trying local cache..."
-                )
-                model = SentenceTransformer(model_id, device=device, local_files_only=True)
-            else:
-                raise e
-
-        return cls(fields, model, normalize, device)
+        return cls(fields, model, normalize)
 
 
 def map_labels_to_fields(

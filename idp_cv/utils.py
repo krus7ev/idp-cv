@@ -1,5 +1,6 @@
 import logging
 import math
+import os
 import re
 from typing import (
     Dict,
@@ -12,7 +13,9 @@ from typing import (
 import pandas as pd
 import torch
 from PIL import Image, ImageDraw
+from sentence_transformers import SentenceTransformer
 
+from .constants import DEFAULT_GRANITE_MODEL_ID
 from .types import (
     DoclingBBox,
     DoclingDoc,
@@ -26,6 +29,27 @@ from .types import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def load_embedding_model(model_id: str = DEFAULT_GRANITE_MODEL_ID, device='cpu') -> Tuple[SentenceTransformer, str]:
+    """Load embedding model with offline-aware fallback to local cache."""
+
+    if device != 'cpu':
+        device = check_gpu_compatibility(device)
+
+    local_files_only = os.environ.get('TRANSFORMERS_OFFLINE', '0') == '1'
+    try:
+        model = SentenceTransformer(model_id, device=device, local_files_only=local_files_only)
+    except Exception as exc:
+        if not local_files_only:
+            logger.warning(
+                f"Could not load model '{model_id}' from HuggingFace (Network error?). Trying local cache..."
+            )
+            model = SentenceTransformer(model_id, device=device, local_files_only=True)
+        else:
+            raise exc
+
+    return model, device
 
 
 def check_gpu_compatibility(device: str, min_compute_capability: tuple = (7, 0)) -> str:
