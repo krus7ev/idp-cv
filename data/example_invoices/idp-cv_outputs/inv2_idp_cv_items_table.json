@@ -1,0 +1,22 @@
+[
+    {
+        "description": "keyboard",
+        "quantity": 4,
+        "total_amount": 436.64
+    },
+    {
+        "description": "desk chair",
+        "quantity": 7,
+        "total_amount": 2377.34
+    },
+    {
+        "description": "software license",
+        "quantity": 5,
+        "total_amount": 272.15
+    },
+    {
+        "description": "laptop",
+        "quantity": 4,
+        "total_amount": 1738.32
+    }
+]

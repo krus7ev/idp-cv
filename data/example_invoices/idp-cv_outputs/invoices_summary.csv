@@ -1,0 +1,8 @@
+Document,invoice_number,order_id,invoice_date,due_date,total_amount,net_amount,tax_amount,tax_rate,shipping_cost,vendor_name,buyer_name,vendor_tax_id,buyer_tax_id,vendor_address,buyer_address
+inv1,INV-6059,,2025-07-25,,9251.14,8621.1,,,,Oceanic Corp.,Acme LLC,,,"101 Marine Drive Miami, FL 33101","55 Industrial Rd Chicago, IL 60601"
+inv2,,,,,5175.49,4824.45,337.71,0.07,13.33,Skyline Solutions,,,,"456 Cloud St Austin, TX 73301",
+inv3,37535203,,2015-07-13,,475.75,432.5,43.25,0.1,,Garcia-Burton,Miranda-Nielsen,916-83-8601,989-84-4547,"0340MoranPort Pattonborough,Wl65859","8668RangelStravenueSuite392 PortKristen,SD88510"
+inv4,13310164,,2020-01-16,,18749.5,17045.0,1704.5,0.1,,MontgomeryLLC,Campbell-Flores,924-83-8802,,"75081David Corners LakeKellyview,NH 03078",34813DavisViews
+inv5,1234NA1,PO-65652345,2025-07-08,2025-07-16,36.44,30.37,6.07,0.2,,John Doe Electronics ltd.,Jane Doe,,,,"123, Apple str."
+inv6,INV-8114,PO-49113,2025-07-05,,10158.78,9470.66,662.95,0.07,25.17,Oceanic Corp.,Jane Smith,,,"101 Marine Drive Miami, FL 33101","300 Elm St Seattle, WA 98101"
+inv7,16892,ES-2012-JH15820139-41012,2012-04-13,,1337.97,1250.04,,,87.93,SuperStore,John Huston,,,,"Crewe, England, United Kingdom"

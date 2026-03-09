@@ -135,8 +135,8 @@ def process_and_extract_results(
         doc_entry = {'Document': stem}
 
         # Export raw JSON
-        output_json = output_dir / f'{stem}.json'
-        with open(output_json, 'w') as f:
+        docling_out_json = output_dir / f'{stem}_docling.json'
+        with open(docling_out_json, 'w') as f:
             json.dump(doc.export_to_dict(), f)
 
         # Visualisation
@@ -175,11 +175,12 @@ def process_and_extract_results(
             try:
                 summary = extract_invoice_summary(doc, extractor=extractor)
                 doc_entry['summary'] = summary.model_dump(exclude_none=False)
+
             except Exception as e:
                 logger.info(f'[{stem}] Summary error: {e}')
                 traceback.print_exc()
 
-        if 'summary_table' in doc_entry:
+        if doc_entry.get('summary_table'):
             for field in ['total_amount', 'net_amount', 'tax_amount', 'tax_rate', 'shipping_cost']:
                 if doc_entry.get('summary') and not getattr(summary, field):
                     for summary_row in doc_entry['summary_table'][0]:
@@ -188,6 +189,20 @@ def process_and_extract_results(
                             if field == 'tax_rate' and isinstance(field_value, float) and field_value > 1.0:
                                 field_value /= 100.0
                             doc_entry['summary'][field] = field_value
+
+            summ_tab_out_json = output_dir / f'{stem}_idp_cv_summary_table.json'
+            with open(summ_tab_out_json, 'w') as f:
+                json.dump([item.model_dump(exclude_none=True) for item in doc_entry['summary_table'][0]], f)
+
+        if doc_entry.get('summary'):
+            summary_out_json = output_dir / f'{stem}_idp_cv_summary.json'
+            with open(summary_out_json, 'w') as f:
+                json.dump(doc_entry['summary'], f)
+
+        if doc_entry.get('line_items'):
+            line_tab_out_json = output_dir / f'{stem}_idp_cv_items_table.json'
+            with open(line_tab_out_json, 'w') as f:
+                json.dump([item.model_dump(exclude_none=True) for item in doc_entry['line_items'][0]], f)
 
         final_results.append(doc_entry)
         logger.info(f'Completed: {stem}')

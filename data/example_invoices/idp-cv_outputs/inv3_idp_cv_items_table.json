@@ -1,0 +1,50 @@
+[
+    {
+        "description": "q&aaday:5-yearjournal",
+        "net_amount": 13.47,
+        "quantity": 3,
+        "tax_rate": 10.0,
+        "total_amount": 14.82,
+        "unit_price": 4.49
+    },
+    {
+        "description": "poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew",
+        "net_amount": 324.75,
+        "quantity": 5,
+        "tax_rate": 10.0,
+        "total_amount": 357.23,
+        "unit_price": 64.95
+    },
+    {
+        "description": "againstallodds:theuntold storyofcanada'sunlikely hockey heroes",
+        "net_amount": 22.05,
+        "quantity": 5,
+        "tax_rate": 10.0,
+        "total_amount": 24.26,
+        "unit_price": 4.41
+    },
+    {
+        "description": "enoughbyhelenroseveare",
+        "net_amount": 26.58,
+        "quantity": 3,
+        "tax_rate": 10.0,
+        "total_amount": 29.24,
+        "unit_price": 8.86
+    },
+    {
+        "description": "waterfowlillustrated",
+        "net_amount": 23.2,
+        "quantity": 4,
+        "tax_rate": 10.0,
+        "total_amount": 25.52,
+        "unit_price": 5.8
+    },
+    {
+        "description": "themessiah",
+        "net_amount": 22.45,
+        "quantity": 5,
+        "tax_rate": 10.0,
+        "total_amount": 24.7,
+        "unit_price": 4.49
+    }
+]
