@@ -1,13 +1,1 @@
-[
-    {
-        "net_amount": 432.5,
-        "tax_amount": 43.25,
-        "tax_rate": 10.0,
-        "total_amount": 475.75
-    },
-    {
-        "net_amount": 432.5,
-        "tax_amount": 43.25,
-        "total_amount": 475.75
-    }
-]
+[{"total_amount": 475.75, "net_amount": 432.5, "tax_amount": 43.25, "tax_rate": 10.0}, {"total_amount": 475.75, "net_amount": 432.5, "tax_amount": 43.25}]

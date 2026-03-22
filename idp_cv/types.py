@@ -1,4 +1,4 @@
-from typing import List, NewType, Protocol, Tuple, runtime_checkable
+from typing import List, Protocol, Tuple, runtime_checkable
 
 
 @runtime_checkable
@@ -74,9 +74,6 @@ class DoclingGroup(Protocol):
     name: str
     children: List[DoclingTextRef]
 
-
-TextID = NewType('TextID', int)
-Ngram = NewType('Ngram', str)
 
 # Common Mapping result types
 MappingMatch = Tuple[str, float, str]  # (label, score, metric)

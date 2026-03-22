@@ -191,6 +191,24 @@ class InvoiceSummary(BaseModel):
             'value_type': 'id',
         },
     )
+    vendor_banking: Optional[str] = Field(
+        default=None,
+        alias='issuer_banking',
+        title='Vendor Banking Details',
+        description='The bank acccount details of the issuer at which payment is due.',
+        examples=['GB13LKIT26418644296553', 'GB30ICA043176037560423'],
+        json_schema_extra={
+            'aliases': [
+                'banking:',
+                'bank account:',
+                'account number:',
+                'account no:',
+                'acc. no:',
+                'iban:',
+            ],
+            'value_type': 'id',
+        },
+    )
     buyer_tax_id: Optional[str] = Field(
         default=None,
         alias='receiver_tax',
@@ -202,6 +220,7 @@ class InvoiceSummary(BaseModel):
             'value_type': 'id',
         },
     )
+
     vendor_address: Optional[str] = Field(
         default=None,
         alias='issuer_addr',

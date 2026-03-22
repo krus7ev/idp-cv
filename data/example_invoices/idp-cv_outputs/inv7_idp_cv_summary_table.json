@@ -1,7 +1,1 @@
-[
-    {
-        "total_amount": 1337.97,
-        "net_amount": 1250.04,
-        "shipping_cost": 87.93
-    }
-]
+[{"total_amount": 1337.97, "net_amount": 1250.04, "shipping_cost": 87.93}]

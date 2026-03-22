@@ -1,17 +1,1 @@
-[
-    {
-        "description": "in55321",
-        "quantity": 3,
-        "unit_price": 2.44
-    },
-    {
-        "description": "in77544",
-        "quantity": 5,
-        "unit_price": 0.21
-    },
-    {
-        "description": "in55321",
-        "quantity": 10,
-        "unit_price": 2.2
-    }
-]
+[{"description": "in55321", "quantity": 3, "unit_price": 2.44}, {"description": "in77544", "quantity": 5, "unit_price": 0.21}, {"description": "in55321", "quantity": 10, "unit_price": 2.2}]

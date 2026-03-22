@@ -1,17 +1,1 @@
-{
-    "invoice_number": "INV-8114",
-    "order_id": "PO-49113",
-    "invoice_date": "2025-07-05",
-    "due_date": null,
-    "total_amount": 10158.78,
-    "net_amount": 9470.66,
-    "tax_amount": 662.95,
-    "tax_rate": 0.07,
-    "shipping_cost": 25.17,
-    "vendor_name": "Oceanic Corp.",
-    "buyer_name": "Jane Smith",
-    "vendor_tax_id": null,
-    "buyer_tax_id": null,
-    "vendor_address": "101 Marine Drive Miami, FL 33101",
-    "buyer_address": "300 Elm St Seattle, WA 98101"
-}
+{"invoice_number": "INV-8114", "order_id": "PO-49113", "invoice_date": "2025-07-05", "due_date": null, "total_amount": 10158.78, "net_amount": 9470.66, "tax_amount": 662.95, "tax_rate": 0.07, "shipping_cost": 25.17, "vendor_name": "Oceanic Corp.", "buyer_name": "Jane Smith", "vendor_tax_id": null, "vendor_banking": null, "buyer_tax_id": null, "vendor_address": "101 Marine Drive Miami, FL 33101", "buyer_address": "300 Elm St Seattle, WA 98101"}

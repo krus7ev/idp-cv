@@ -1,17 +1,1 @@
-{
-    "invoice_number": "13310164",
-    "order_id": null,
-    "invoice_date": "2020-01-16",
-    "due_date": null,
-    "total_amount": 18749.5,
-    "net_amount": 17045.0,
-    "tax_amount": 1704.5,
-    "tax_rate": 0.1,
-    "shipping_cost": null,
-    "vendor_name": "MontgomeryLLC",
-    "buyer_name": "Campbell-Flores",
-    "vendor_tax_id": "924-83-8802",
-    "buyer_tax_id": null,
-    "vendor_address": "75081David Corners LakeKellyview,NH 03078",
-    "buyer_address": "34813DavisViews"
-}
+{"invoice_number": "13310164", "order_id": null, "invoice_date": "2020-01-16", "due_date": null, "total_amount": 18749.5, "net_amount": 17045.0, "tax_amount": 1704.5, "tax_rate": 0.1, "shipping_cost": null, "vendor_name": "Montgomery LLC", "buyer_name": "Campbell-Flores", "vendor_tax_id": "924-83-8802", "vendor_banking": "GB13LKIT26418644296553", "buyer_tax_id": "999-80-5625", "vendor_address": "75081 David Corners Lake Kellyview, NH 03078", "buyer_address": "34813 Davis Views Jasonhaven, MO 32671"}

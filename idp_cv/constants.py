@@ -52,9 +52,16 @@ RE_ADDR_ALPHANUMERIC = r'[A-Z0-9\s.,\-#\'/&()]+'
 RE_DOUBLE_DIGIT_PERCENTAGE = r'(?<!\d)\d{1,2}%(?!\d)'
 
 COMPANY_SUFFIXES = {'limited', 'llc', 'ltd', 'inc', 'gmbh', 'corp'}
-ADDR_NER_TAGS = {'LOC', 'FAC', 'CARDINAL', 'GPE', 'ORG', 'PERSON', 'DATE'}
+ADDR_NER_TAGS = {'LOC', 'FAC', 'CARDINAL', 'GPE', 'ORG', 'PERSON', 'DATE', 'PRODUCT'}
 LOC_NER_TAGS = {'LOC', 'FAC', 'GPE'}
 NAME_NER_TAGS = {'PERSON', 'NORP', 'ORG', 'GPE'}
 
 # AI Models
 DEFAULT_GRANITE_MODEL_ID = 'ibm-granite/granite-embedding-small-english-r2'
+
+
+C_SWAP_FILEDS = [
+    ('issuer', 'receiver'),
+    ('issuer_addr', 'receiver_addr'),
+    ('issuer_tax', 'receiver_tax'),
+]

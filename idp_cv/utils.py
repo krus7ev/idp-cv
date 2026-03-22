@@ -131,13 +131,26 @@ def draw_page_items(
                 draw_pdf_bbox_on_image(draw, prov.bbox, page_item.size, image.size, color, thickness, flip)
 
 
-def clean_string(value: object, *, lowercase: bool = False, strip=' ') -> str:
+def clean_string(value: object, *, lowercase: bool = False, strip=' ', splitup=False) -> str:
     """Standard text cleaner used across extraction and matching flows."""
     if not value:
         return ''
 
     text = str(value).replace('\n', ' ')
     text = re.sub(r'\s+', ' ', text).strip(strip)
+
+    if splitup is True:
+        # Add space around punctuation (like colons/commas) if missing
+        # Captures letter/digit before punctuation, and letter/digit after
+        text = re.sub(r'([A-Za-z0-9])([:,;])([A-Za-z0-9])', r'\1\2 \3', text)
+
+        # Split between lowercase and uppercase (CamelCase splitting)
+        text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
+
+        # Split between digits and letters
+        text = re.sub(r'(\d)([A-Za-z])', r'\1 \2', text)
+        text = re.sub(r'([A-Za-z])(\d)', r'\1 \2', text)
+
     return text.lower() if lowercase else text
 
 
@@ -193,7 +206,7 @@ def extract_clean_table_data(
 
 
 def get_bbox(t: Union[DoclingText, DoclingGroup]) -> Optional[DoclingBBox]:
-    # Retrieve bbox from prov. usually prov[0].bbox
+    """Retrieve bbox from prov. (expected in prov[0].bbox)"""
     provs: List[DoclingProv] = getattr(t, 'prov', [])
     if provs and hasattr(provs[0], 'bbox'):
         return provs[0].bbox
@@ -201,36 +214,38 @@ def get_bbox(t: Union[DoclingText, DoclingGroup]) -> Optional[DoclingBBox]:
 
 
 def get_bbox_center(bbox: DoclingBBox) -> Tuple[float, float]:
-    """Get center (x, y) of a bounding box."""
-    # docling bbox has l, r, t, b attributes in BOTTOMLEFT origin format
+    """
+    Get center (x, y) of a Docling bounding box.
+        bbox: has l, r, t, b coordinate attributes in BOTTOMLEFT origin format
+    """
     return ((bbox.l + bbox.r) / 2, (bbox.t + bbox.b) / 2)
 
 
 def euclidean_dist(bbox1: DoclingBBox, bbox2: DoclingBBox) -> float:
     """Calculate Euclidean distance between centers of two bboxes."""
-    c1 = get_bbox_center(bbox1)
-    c2 = get_bbox_center(bbox2)
+    c1, c2 = get_bbox_center(bbox1), get_bbox_center(bbox2)
     return math.sqrt((c1[0] - c2[0]) ** 2 + (c1[1] - c2[1]) ** 2)
 
 
 def vertically_overlap(bbox1: DoclingBBox, bbox2: DoclingBBox) -> bool:
+    "Check if two bounding boxes' vertical spans overlap"
     return max(bbox1.b, bbox2.b) < min(bbox1.t, bbox2.t)
 
 
 def horizontally_overlap(bbox1: DoclingBBox, bbox2: DoclingBBox) -> bool:
+    "Check if two bounding boxes' horizontal spans overlap"
     return min(bbox1.r, bbox2.r) > max(bbox1.l, bbox2.l)
 
 
 def is_horizontally_aligned(bbox1: DoclingBBox, bbox2: DoclingBBox) -> bool:
     """
-    Check if two bboxes are roughly on the same horizontal line (center y)
-    tolerance can be dynamic based on height, but fixed is simpler
+    Check if two bboxes are next to each other with no overlapping area (disjoint)"
     """
     return vertically_overlap(bbox1, bbox2) and not horizontally_overlap(bbox1, bbox2)
 
 
 def is_vertically_aligned(bbox1: DoclingBBox, bbox2: DoclingBBox) -> bool:
-    """Check if two bboxes are roughly in the same vertical column (center x)."""
+    "Check if two bounding boxes are one above the other with no overlapping area (disjoint)"
     return horizontally_overlap(bbox1, bbox2) and not vertically_overlap(bbox1, bbox2)
 
 

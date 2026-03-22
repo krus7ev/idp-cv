@@ -84,23 +84,22 @@ class LexicalMapper:
         distance = prev_row[m]
         return 1.0 - (distance / max(n, m))
 
-    def map_field(self, source_label: str) -> tuple[Optional[str], float]:
-        """Find best matching field for source label using lexical similarity."""
+    def map_field(self, source_label: str, rank: int = 1) -> Union[tuple[float, str], List[tuple[float, str]]]:
+        """Find best matching field(s) for source label using lexical similarity."""
         if not self.field_aliases:
             return None, 0.0
 
         source_norm = normalize_text(source_label)
-        best_field = None
-        best_score = 0.0
 
+        results: List[tuple[float, str]] = []
         for field_name, aliases in self.field_aliases.items():
             for alias in aliases:
                 score = self.similarity(source_norm, alias)
-                if score > best_score:
-                    best_score = score
-                    best_field = field_name
+                results.append((field_name, score))
 
-        return best_field, best_score
+        results = sorted(results, key=lambda x: x[1], reverse=True)
+
+        return results[:rank]
 
     @classmethod
     def create(cls, schema) -> Optional['LexicalMapper']:
@@ -201,6 +200,7 @@ def map_labels_to_fields(
     label_samples: Optional[Dict[str, List[str]]] = None,
     validator_func: Optional[Callable[[str, str, Dict[str, str]], Union[str, float, None]]] = None,
     semantic_threshold: float = 0.98,
+    lexical_rank=1,
 ) -> Dict[str, FieldMappingResult]:
     """
     Map a list of labels (e.g., table columns or n-grams) to schema fields
@@ -215,46 +215,52 @@ def map_labels_to_fields(
 
     for label in labels:
         # High lexical similarity above threshold takes priority
-        lex_match, lex_score = lmapper.map_field(label)
-        if lex_match and lex_score >= lexical_threshold:
-            match_field, match_score, metric = lex_match, lex_score, 'lexical'
-        else:
-            sem_match, sem_score = smapper.map_field(label)
-            if sem_match and lex_match:
-                if sem_score >= semantic_threshold and sem_score >= lex_score:
-                    match_field, match_score, metric = sem_match, sem_score, 'semantic'
-                else:
-                    match_field, match_score, metric = lex_match, lex_score, 'lexical'
-            elif sem_match and sem_score >= semantic_threshold:
-                match_field, match_score, metric = sem_match, sem_score, 'semantic'
-            elif lex_match:
+        lex_mapped = lmapper.map_field(label, rank=lexical_rank)
+        for lex_match, lex_score in lex_mapped:
+            if lex_match and lex_score >= lexical_threshold:
                 match_field, match_score, metric = lex_match, lex_score, 'lexical'
             else:
-                continue
+                sem_match, sem_score = smapper.map_field(label)
+                if sem_match and lex_match:
+                    if sem_score >= semantic_threshold and sem_score >= lex_score:
+                        match_field, match_score, metric = sem_match, sem_score, 'semantic'
+                    else:
+                        match_field, match_score, metric = lex_match, lex_score, 'lexical'
+                elif sem_match and sem_score >= semantic_threshold:
+                    match_field, match_score, metric = sem_match, sem_score, 'semantic'
+                elif lex_match:
+                    match_field, match_score, metric = lex_match, lex_score, 'lexical'
+                else:
+                    continue
 
-        # Optional value-type validation
-        if validator_func and field_value_types and label_samples:
-            v_type = field_value_types.get(match_field)
-            samples = label_samples.get(label, [])
-            if v_type and samples:
-                valid_count = 0
-                testable_samples = [s for s in samples if s.strip()]
-                if testable_samples:
-                    for s in testable_samples:
-                        if validator_func(match_field, s, field_value_types) is not None:
-                            valid_count += 1
+            # Optional value-type validation
+            if validator_func and field_value_types and label_samples:
+                v_type = field_value_types.get(match_field)
+                samples = label_samples.get(label, [])
+                if v_type and samples:
+                    valid_count = 0
+                    testable_samples = [s for s in samples if s.strip()]
+                    if testable_samples:
+                        for s in testable_samples:
+                            if validator_func(match_field, s, field_value_types) is not None:
+                                valid_count += 1
 
-                    if valid_count / (len(testable_samples) or 1) < 0.5:
-                        continue
+                        if valid_count / (len(testable_samples) or 1) < 0.5:
+                            continue
 
-        all_matches_by_field[match_field].append((label, match_score, metric))
+            all_matches_by_field[match_field].append((label, match_score, metric))
 
     # Resolve best match per field and prepare response
     result: Dict[str, FieldMappingResult] = {}
+    used_labels = []
     for field_name, candidates in all_matches_by_field.items():
         # Sort candidates: Lexical matches > Semantic matches, then by score
         sorted_cands = sorted(candidates, key=lambda x: (1 if x[2] == 'lexical' else 0, x[1]), reverse=True)
-        result[field_name] = {'best': sorted_cands[0], 'candidates': sorted_cands}
+        final_cand = (
+            sorted_cands[0] if len(sorted_cands) == 1 or sorted_cands[0][0] not in used_labels else sorted_cands[1]
+        )
+        result[field_name] = {'best': final_cand, 'candidates': sorted_cands}
+        used_labels.append(final_cand[0])
 
     return result
 
