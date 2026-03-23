@@ -1,1 +1,26 @@
-[{"description": "15\"x15\"whitemarblecoffee top table filigree lapis inlay art christmas gift", "quantity": 5, "unit_price": 650.0, "total_amount": 3575.0, "net_amount": 3250.0, "tax_rate": 10.0}, {"description": "30x30\"marbe black top table semi preciousbirdart black friday gift decor", "quantity": 5, "unit_price": 2399.0, "total_amount": 13194.5, "net_amount": 11995.0, "tax_rate": 10.0}, {"description": "15'x15-white marble chess top table carnelian inlayart black friday gift deco", "quantity": 3, "unit_price": 600.0, "total_amount": 1980.0, "net_amount": 1800.0, "tax_rate": 10.0}]
+[
+    {
+        "description": "15\"x15\"whitemarblecoffee top table filigree lapis inlay art christmas gift",
+        "quantity": 5,
+        "unit_price": 650.0,
+        "total_amount": 3575.0,
+        "net_amount": 3250.0,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "30x30\"marbe black top table semi preciousbirdart black friday gift decor",
+        "quantity": 5,
+        "unit_price": 2399.0,
+        "total_amount": 13194.5,
+        "net_amount": 11995.0,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "15'x15-white marble chess top table carnelian inlayart black friday gift deco",
+        "quantity": 3,
+        "unit_price": 600.0,
+        "total_amount": 1980.0,
+        "net_amount": 1800.0,
+        "tax_rate": 10.0
+    }
+]

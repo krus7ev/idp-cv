@@ -1,1 +1,38 @@
-[{"description": "monitor", "quantity": 8, "unit_price": 396.27, "total_amount": 3170.16}, {"description": "monitor", "quantity": 9, "unit_price": 379.15, "total_amount": 3412.35}, {"description": "keyboard", "quantity": 7, "unit_price": 110.73, "total_amount": 775.11}, {"description": "keyboard", "quantity": 8, "unit_price": 65.3, "total_amount": 522.4}, {"description": "laptop", "quantity": 2, "unit_price": 297.11, "total_amount": 594.22}, {"description": "monitor", "quantity": 2, "unit_price": 498.21, "total_amount": 996.42}]
+[
+    {
+        "description": "monitor",
+        "quantity": 8,
+        "unit_price": 396.27,
+        "total_amount": 3170.16
+    },
+    {
+        "description": "monitor",
+        "quantity": 9,
+        "unit_price": 379.15,
+        "total_amount": 3412.35
+    },
+    {
+        "description": "keyboard",
+        "quantity": 7,
+        "unit_price": 110.73,
+        "total_amount": 775.11
+    },
+    {
+        "description": "keyboard",
+        "quantity": 8,
+        "unit_price": 65.3,
+        "total_amount": 522.4
+    },
+    {
+        "description": "laptop",
+        "quantity": 2,
+        "unit_price": 297.11,
+        "total_amount": 594.22
+    },
+    {
+        "description": "monitor",
+        "quantity": 2,
+        "unit_price": 498.21,
+        "total_amount": 996.42
+    }
+]

@@ -1,1 +1,50 @@
-[{"description": "q&aaday:5-yearjournal", "quantity": 3, "unit_price": 4.49, "total_amount": 14.82, "net_amount": 13.47, "tax_rate": 10.0}, {"description": "poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew", "quantity": 5, "unit_price": 64.95, "total_amount": 357.23, "net_amount": 324.75, "tax_rate": 10.0}, {"description": "againstallodds:theuntold storyofcanada'sunlikely hockey heroes", "quantity": 5, "unit_price": 4.41, "total_amount": 24.26, "net_amount": 22.05, "tax_rate": 10.0}, {"description": "enoughbyhelenroseveare", "quantity": 3, "unit_price": 8.86, "total_amount": 29.24, "net_amount": 26.58, "tax_rate": 10.0}, {"description": "waterfowlillustrated", "quantity": 4, "unit_price": 5.8, "total_amount": 25.52, "net_amount": 23.2, "tax_rate": 10.0}, {"description": "themessiah", "quantity": 5, "unit_price": 4.49, "total_amount": 24.7, "net_amount": 22.45, "tax_rate": 10.0}]
+[
+    {
+        "description": "q&aaday:5-yearjournal",
+        "quantity": 3,
+        "unit_price": 4.49,
+        "total_amount": 14.82,
+        "net_amount": 13.47,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "poorcharlie'salmanackthewit andwisdomofcharlest munger3rded.brandnew",
+        "quantity": 5,
+        "unit_price": 64.95,
+        "total_amount": 357.23,
+        "net_amount": 324.75,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "againstallodds:theuntold storyofcanada'sunlikely hockey heroes",
+        "quantity": 5,
+        "unit_price": 4.41,
+        "total_amount": 24.26,
+        "net_amount": 22.05,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "enoughbyhelenroseveare",
+        "quantity": 3,
+        "unit_price": 8.86,
+        "total_amount": 29.24,
+        "net_amount": 26.58,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "waterfowlillustrated",
+        "quantity": 4,
+        "unit_price": 5.8,
+        "total_amount": 25.52,
+        "net_amount": 23.2,
+        "tax_rate": 10.0
+    },
+    {
+        "description": "themessiah",
+        "quantity": 5,
+        "unit_price": 4.49,
+        "total_amount": 24.7,
+        "net_amount": 22.45,
+        "tax_rate": 10.0
+    }
+]

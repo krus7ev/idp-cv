@@ -1,1 +1,18 @@
-{"invoice_number": "1234NA1", "order_id": "PO-65652345", "invoice_date": "2025-07-08", "due_date": "2025-07-16", "total_amount": 36.44, "net_amount": 30.37, "tax_amount": 6.07, "tax_rate": 0.2, "shipping_cost": null, "vendor_name": "John Doe Electronics ltd.", "buyer_name": "Jane Doe", "vendor_tax_id": null, "vendor_banking": null, "buyer_tax_id": null, "vendor_address": null, "buyer_address": "123, Apple str."}
+{
+    "invoice_number": "1234NA1",
+    "order_id": "PO-65652345",
+    "invoice_date": "2025-07-08",
+    "due_date": "2025-07-16",
+    "total_amount": 36.44,
+    "net_amount": 30.37,
+    "tax_amount": 6.07,
+    "tax_rate": 0.2,
+    "shipping_cost": null,
+    "vendor_name": "John Doe Electronics ltd.",
+    "buyer_name": "Jane Doe",
+    "vendor_tax_id": null,
+    "vendor_banking": null,
+    "buyer_tax_id": null,
+    "vendor_address": null,
+    "buyer_address": "123, Apple str."
+}

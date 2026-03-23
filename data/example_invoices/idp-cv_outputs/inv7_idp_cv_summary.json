@@ -1,1 +1,18 @@
-{"invoice_number": "16892", "order_id": "ES-2012-JH15820139-41012", "invoice_date": "2012-04-13", "due_date": null, "total_amount": 1337.97, "net_amount": 1250.04, "tax_amount": null, "tax_rate": null, "shipping_cost": 87.93, "vendor_name": "Super Store", "buyer_name": "John Huston", "vendor_tax_id": null, "vendor_banking": null, "buyer_tax_id": null, "vendor_address": null, "buyer_address": "Crewe, England, United Kingdom"}
+{
+    "invoice_number": "16892",
+    "order_id": "ES-2012-JH15820139-41012",
+    "invoice_date": "2012-04-13",
+    "due_date": null,
+    "total_amount": 1337.97,
+    "net_amount": 1250.04,
+    "tax_amount": null,
+    "tax_rate": null,
+    "shipping_cost": 87.93,
+    "vendor_name": "Super Store",
+    "buyer_name": "John Huston",
+    "vendor_tax_id": null,
+    "vendor_banking": null,
+    "buyer_tax_id": null,
+    "vendor_address": null,
+    "buyer_address": "Crewe, England, United Kingdom"
+}

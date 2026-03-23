@@ -1,1 +1,18 @@
-{"invoice_number": "37535203", "order_id": null, "invoice_date": "2015-07-13", "due_date": null, "total_amount": 475.75, "net_amount": 432.5, "tax_amount": 43.25, "tax_rate": 0.1, "shipping_cost": null, "vendor_name": "Garcia-Burton", "buyer_name": "Miranda-Nielsen", "vendor_tax_id": "916-83-8601", "vendor_banking": "GB30ICA043176037560423", "buyer_tax_id": "989-84-4547", "vendor_address": "0340 Moran Port Pattonborough, Wl 65859", "buyer_address": "8668 Rangel Stravenue Suite 392 Port Kristen, SD 88510"}
+{
+    "invoice_number": "37535203",
+    "order_id": null,
+    "invoice_date": "2015-07-13",
+    "due_date": null,
+    "total_amount": 475.75,
+    "net_amount": 432.5,
+    "tax_amount": 43.25,
+    "tax_rate": 0.1,
+    "shipping_cost": null,
+    "vendor_name": "Garcia-Burton",
+    "buyer_name": "Miranda-Nielsen",
+    "vendor_tax_id": "916-83-8601",
+    "vendor_banking": "GB30ICA043176037560423",
+    "buyer_tax_id": "989-84-4547",
+    "vendor_address": "0340 Moran Port Pattonborough, Wl 65859",
+    "buyer_address": "8668 Rangel Stravenue Suite 392 Port Kristen, SD 88510"
+}
