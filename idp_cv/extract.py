@@ -78,18 +78,21 @@ class DocumentFieldExtractor:
 
     @staticmethod
     def _process_text_ngrams(
-        text: str, n_max: int = 3, include_full: bool = False, start=False, reverse: bool = False, max: int = -1
+        text: str, n_max: int = 3, include_full: bool = False, start=False, reverse: bool = False
     ) -> List[str]:
         """Generate n-grams starting from the first token of the text."""
-        # Tokenize naively (without splitup), taking care only of colons
+        # Clean naively (without extra splitup=True parameter), taking care only of colons
         clean_text = clean_string(text)
-        tokens = clean_text.split()
-        for t, token in enumerate(tokens):
-            colon_split = token.split(':', maxsplit=max)
-            if len(colon_split) >= 2 and max == -1:
-                tokens = tokens[:t] + [ct + ':' for ct in colon_split[:-1]] + colon_split[-1:] + tokens[t + 1 :]
-            elif len(colon_split) == 2 and colon_split[1]:
-                tokens = tokens[:t] + [colon_split[0] + ':', colon_split[1]] + tokens[t + 1 :]
+        space_split = clean_text.split()
+        tokens = []
+        for token in space_split:
+            colon_split = token.split(':')
+            if len(colon_split) >= 2:
+                tokens.extend([ct + ':' for ct in colon_split[:-1] if ct])
+                if colon_split[-1]:
+                    tokens.append(colon_split[-1])
+            else:
+                tokens.append(token)
 
         clean_text = ' '.join(tokens)
 
@@ -113,7 +116,7 @@ class DocumentFieldExtractor:
         """Prepare (text_id, n-grams) tuples for key candidate generation from a group of docling text objects"""
         key_cands: List[Tuple[int, List[str]]] = []
         for text_obj in texts:
-            ngrams = cls._process_text_ngrams(text_obj.text, n_max=n_max, max=1)
+            ngrams = cls._process_text_ngrams(text_obj.text, n_max=n_max)
             text_id = int(text_obj.self_ref.split('/')[-1])
             key_cands.append((text_id, ngrams))
 
