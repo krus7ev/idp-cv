@@ -170,7 +170,6 @@ class InvoiceSummary(BaseModel):
             'aliases': [
                 'bill to:',
                 'buyer:',
-                # 'ship to:',
                 'customer:',
                 'receiver:',
                 'recepient:',

@@ -342,20 +342,20 @@ class DocumentFieldExtractor:
     def _extract_value_from_group(
         self,
         field_name: str,
-        tid: int,
-        g: int,
+        key_tid: int,
+        key_group: int,
         texts: List[DoclingText],
         candidates: List[List[Tuple[int, List[str]]]],
     ) -> Optional[Union[str, float]]:
         """Strategy B: Spatial mapping (Value is in a separate text block)."""
-        key_bbox = get_bbox(texts[tid])
+        key_bbox = get_bbox(texts[key_tid])
         if not key_bbox:
             return None
 
         # Search within the SAME group defined by Docling
         group_cands = []
-        for neighbor_tid, _ in candidates[g]:
-            if neighbor_tid == tid or neighbor_tid not in self.text_data_buffer:
+        for neighbor_tid, _ in candidates[key_group]:
+            if neighbor_tid == key_tid or neighbor_tid not in self.text_data_buffer:
                 continue
 
             neighbor_text = texts[neighbor_tid]
@@ -377,7 +377,7 @@ class DocumentFieldExtractor:
         # Sort by proximity
         group_cands.sort(key=lambda x: x[1])
         logger.debug(
-            f'    - Strategy B shortlist {len(group_cands)} candidates of group #{g}: {[c[0] for c in group_cands]}'
+            f'    - Strategy B shortlisted: {len(group_cands)} of group #{key_group}: {[c[0] for c in group_cands]}'
         )
         for cand_text, _, cand_tid in group_cands:
             cand_ngrams = self._process_text_ngrams(cand_text, n_max=6, include_full=True, start=True, reverse=True)
@@ -391,8 +391,6 @@ class DocumentFieldExtractor:
     def _get_missing_fields(
         self,
         mapped_data: Dict[str, Union[str, float, None]],
-        mapped_keys: Dict[str, Tuple[str, List[Tuple[int, int]]]],
-        empty_fields: Dict[str, Tuple[str, List[Tuple[int, int]]]],
         ignore_types: Set['str'] = {'amount', 'rate'},
         reverse: bool = True,
         swap_fields: List[Tuple[str]] = C_SWAP_FILEDS,
@@ -413,7 +411,7 @@ class DocumentFieldExtractor:
 
     def _extract_orphan_value(self, field_name: str) -> Optional[Union[str, float]]:
         """Strategy C: Orphan Remainder Recovery from unused text buffer."""
-        for tid, remaining_text in list(self.text_data_buffer.items()):
+        for tid, remaining_text in self.text_data_buffer.items():
             if not remaining_text:
                 continue
             cand_ngrams = self._process_text_ngrams(remaining_text, n_max=6, include_full=True, reverse=True)
@@ -592,13 +590,28 @@ class DocumentFieldExtractor:
                     f' [{[(texts[loc[1]].text, f"g{loc[0]}: {candidates[loc[0]]}") for loc in locations]}]'
                 )
 
-        # Strategy C: Greedy extract non-numeric values whithout key from buffer if they fit missing fields in order
-        missing_fields = self._get_missing_fields(summary_data, fields_map, empty_fields_by_name)
+        # Final Sweep: Extract non-numeric values from buffer if they fit missing fields in order
+        missing_fields = self._get_missing_fields(summary_data)
         if missing_fields:
-            logger.debug(f'Strategy C: Attempting orphan-value recovery for missing fields: {missing_fields}')
+            logger.debug(f'Final Sweep: Attempting orphan-value recovery for missing fields: {missing_fields}')
             for field_name in missing_fields:
                 logger.debug(f"Field '{field_name}':")
-                parsed = self._extract_orphan_value(field_name)
+
+                anchor_field = None
+                for anchor_name in {'issuer', 'receiver'}:
+                    if anchor_name in summary_data and anchor_name in field_name:
+                        anchor_field = anchor_name
+                        break
+
+                parsed = None
+                if anchor_field:
+                    for g, tid in fields_map[anchor_field][1]:
+                        parsed = self._extract_value_from_group(field_name, tid, g, texts, candidates)
+
+                if parsed is None:
+                    # Strategy C: Greedy-match orphan field relying on order heuristics
+                    parsed = self._extract_orphan_value(field_name)
+
                 if parsed:
                     self._add_orphan_field_value(field_name, parsed, summary_data)
 
