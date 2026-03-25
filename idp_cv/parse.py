@@ -116,6 +116,9 @@ class LexicalMapper:
 class SemanticMapper:
     """Semantic field matcher using embedding-based similarity."""
 
+    # Class-level cache to share embeddings across all documents and instances
+    _embedding_cache: Dict[str, torch.Tensor] = {}
+
     def __init__(self, fields: Sequence[FieldInfo], model: SentenceTransformer, normalize: bool):
         """Initialize mapper with field schema."""
         self.fields = fields
@@ -126,8 +129,13 @@ class SemanticMapper:
         self.set_embeddings()
 
     def get_embedding(self, text: str) -> torch.Tensor:
-        """Compute embedding vector for input string."""
-        return self.model.encode(text, convert_to_tensor=True, normalize_embeddings=self.normalize)
+        """Compute embedding vector for input string with caching."""
+        if text in self._embedding_cache:
+            return self._embedding_cache[text]
+
+        tensor = self.model.encode(text, convert_to_tensor=True, normalize_embeddings=self.normalize)
+        self._embedding_cache[text] = tensor
+        return tensor
 
     def set_embeddings(self) -> None:
         """Precompute embeddings for all of field's aliases or its title"""

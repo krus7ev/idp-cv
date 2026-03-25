@@ -1,4 +1,5 @@
 import argparse
+import concurrent.futures
 import json
 import logging
 import os
@@ -72,8 +73,95 @@ warnings.filterwarnings('ignore', category=UserWarning, module='docling')
 logger = logging.getLogger(__name__)
 
 
+def extract_single_document(
+    result, output_dir, extractor, do_viz, do_summary, do_tables, table_sem_mapper, table_lex_mapper
+):
+    """Processes a single Docling conversion result."""
+    doc = result.document
+    stem = result.input.file.stem
+    doc_entry = {'Document': stem}
+
+    # Export raw JSON
+    docling_out_json = output_dir / f'{stem}_docling.json'
+    with open(docling_out_json, 'w') as f:
+        json.dump(doc.export_to_dict(), f)
+
+    # Visualisation
+    if do_viz:
+        for page_no, page_item in doc.pages.items():
+            if page_item.image is None:
+                continue
+            img = page_item.image.pil_image.convert('RGB')
+            draw_page_items(img, doc.texts, page_no, page_item, 'blue', 2, True)
+            draw_page_items(img, doc.tables, page_no, page_item, 'magenta', 4, True)
+            img.save(output_dir / f'viz_{stem}_p{page_no}.png')
+
+    if do_tables:
+        # Table Mapping
+        doc_entry['tables'] = extract_clean_table_data(doc)
+        if doc_entry['tables']:
+            items_table = [doc_entry['tables'][0]]  # NOTE Assuming the first table is the items table
+        else:
+            items_table = []
+
+        summary_table = []
+        if len(doc_entry['tables']) >= 2:
+            summary_table = [doc_entry['tables'][1]]  # NOTE Assuming the second table is the summary table
+
+        if items_table:
+            doc_entry['line_items'] = map_table_to_line_items(
+                items_table, smapper=table_sem_mapper, lmapper=table_lex_mapper
+            )
+        if summary_table:
+            doc_entry['summary_table'] = map_table_to_line_items(
+                summary_table, smapper=table_sem_mapper, lmapper=table_lex_mapper
+            )
+
+    # Summary Extraction
+    if do_summary:
+        try:
+            summary = extract_invoice_summary(doc, extractor=extractor)
+            doc_entry['summary'] = summary.model_dump(exclude_none=False)
+
+        except Exception as e:
+            logger.info(f'[{stem}] Summary error: {e}')
+            traceback.print_exc()
+
+    if doc_entry.get('summary_table'):
+        for field in ['total_amount', 'net_amount', 'tax_amount', 'tax_rate', 'shipping_cost']:
+            if doc_entry.get('summary') and not getattr(summary, field):
+                for summary_row in doc_entry['summary_table'][0]:
+                    field_value = getattr(summary_row, field)
+                    if field_value:
+                        if field == 'tax_rate' and isinstance(field_value, float) and field_value > 1.0:
+                            field_value /= 100.0
+                        doc_entry['summary'][field] = field_value
+
+        summ_tab_out_json = output_dir / f'{stem}_idp_cv_summary_table.json'
+        with open(summ_tab_out_json, 'w') as f:
+            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['summary_table'][0]], f)
+
+    if doc_entry.get('summary'):
+        summary_out_json = output_dir / f'{stem}_idp_cv_summary.json'
+        with open(summary_out_json, 'w') as f:
+            json.dump(doc_entry['summary'], f)
+
+    if doc_entry.get('line_items'):
+        line_tab_out_json = output_dir / f'{stem}_idp_cv_items_table.json'
+        with open(line_tab_out_json, 'w') as f:
+            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['line_items'][0]], f)
+
+    logger.info(f'Completed: {stem}')
+    return doc_entry
+
+
 def process_and_extract_results(
-    input_dir: Path, output_dir: Path, device: str = 'cpu', do_summary: bool = True, do_viz: bool = True
+    input_dir: Path,
+    output_dir: Path,
+    device: str = 'cpu',
+    do_summary: bool = True,
+    do_viz: bool = True,
+    do_tables: bool = True,
 ):
     """
     Unified processing routine for docling conversion, table mapping and summary extraction.
@@ -122,91 +210,44 @@ def process_and_extract_results(
         return []
 
     logger.info(f'Found {len(files_to_process)} files to process in {input_dir}')
-    conv_results = converter.convert_all(files_to_process)
 
-    final_results = []
-    for result in conv_results:
-        if result.status != 'success':
-            logger.info(f'Failed: {result.input.file.name}')
-            continue
+    # Choose worker count based on CPU cores, keeping room for Docling's own threads
+    max_workers = max(1, os.cpu_count() - 2)
 
-        doc = result.document
-        stem = result.input.file.stem
-        doc_entry = {'Document': stem}
+    logger.info(f'Starting extraction with {max_workers} background workers...')
 
-        # Export raw JSON
-        docling_out_json = output_dir / f'{stem}_docling.json'
-        with open(docling_out_json, 'w') as f:
-            json.dump(doc.export_to_dict(), f)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_stem = {}
+        final_results = []
+        for result in converter.convert_all(files_to_process):
+            if result.status != 'success':
+                logger.info(f'Failed: {result.input.file.name}')
+                continue
 
-        # Visualisation
-        if do_viz:
-            for page_no, page_item in doc.pages.items():
-                if page_item.image is None:
-                    continue
-                img = page_item.image.pil_image.convert('RGB')
-                draw_page_items(img, doc.texts, page_no, page_item, 'blue', 2, True)
-                draw_page_items(img, doc.tables, page_no, page_item, 'magenta', 4, True)
-                img.save(output_dir / f'viz_{stem}_p{page_no}.png')
-
-        # Table Mapping
-        doc_entry['tables'] = extract_clean_table_data(doc)
-        if doc_entry['tables']:
-            items_table = [doc_entry['tables'][0]]  # NOTE Assuming the first table is the items table
-        else:
-            items_table = []
-
-        if len(doc_entry['tables']) >= 2:
-            summary_table = [doc_entry['tables'][1]]  # NOTE Assuming the second table is the summary table
-        else:
-            summary_table = []
-
-        if items_table:
-            doc_entry['line_items'] = map_table_to_line_items(
-                items_table, smapper=table_sem_mapper, lmapper=table_lex_mapper
+            future = executor.submit(
+                extract_single_document,
+                result,
+                output_dir,
+                extractor,
+                do_viz,
+                do_summary,
+                do_tables,
+                table_sem_mapper,
+                table_lex_mapper,
             )
-        if summary_table:
-            doc_entry['summary_table'] = map_table_to_line_items(
-                summary_table, smapper=table_sem_mapper, lmapper=table_lex_mapper
-            )
+            future_to_stem[future] = result.input.file.stem
 
-        # Summary Extraction
-        if do_summary:
+        # Collect the extracted metadata as they finish in the background
+        for future in concurrent.futures.as_completed(future_to_stem):
+            stem = future_to_stem[future]
             try:
-                summary = extract_invoice_summary(doc, extractor=extractor)
-                doc_entry['summary'] = summary.model_dump(exclude_none=False)
+                doc_entry = future.result()
+                final_results.append(doc_entry)
+                logger.info(f'Collected extraction: {stem}')
+            except Exception as exc:
+                logger.error(f'Error processing {stem}: {exc}')
 
-            except Exception as e:
-                logger.info(f'[{stem}] Summary error: {e}')
-                traceback.print_exc()
-
-        if doc_entry.get('summary_table'):
-            for field in ['total_amount', 'net_amount', 'tax_amount', 'tax_rate', 'shipping_cost']:
-                if doc_entry.get('summary') and not getattr(summary, field):
-                    for summary_row in doc_entry['summary_table'][0]:
-                        field_value = getattr(summary_row, field)
-                        if field_value:
-                            if field == 'tax_rate' and isinstance(field_value, float) and field_value > 1.0:
-                                field_value /= 100.0
-                            doc_entry['summary'][field] = field_value
-
-            summ_tab_out_json = output_dir / f'{stem}_idp_cv_summary_table.json'
-            with open(summ_tab_out_json, 'w') as f:
-                json.dump([item.model_dump(exclude_none=True) for item in doc_entry['summary_table'][0]], f)
-
-        if doc_entry.get('summary'):
-            summary_out_json = output_dir / f'{stem}_idp_cv_summary.json'
-            with open(summary_out_json, 'w') as f:
-                json.dump(doc_entry['summary'], f)
-
-        if doc_entry.get('line_items'):
-            line_tab_out_json = output_dir / f'{stem}_idp_cv_items_table.json'
-            with open(line_tab_out_json, 'w') as f:
-                json.dump([item.model_dump(exclude_none=True) for item in doc_entry['line_items'][0]], f)
-
-        final_results.append(doc_entry)
-        logger.info(f'Completed: {stem}')
-
+    final_results.sort(key=lambda x: x.get('Document', ''))
     return final_results
 
 
@@ -274,6 +315,7 @@ def main():
         df = pd.DataFrame(summary_data)
         cols = ['Document'] + [c for c in df.columns if c != 'Document']
         df = df[cols].set_index('Document')
+        df.sort_index(inplace=True)
 
         # Save overarching summary to CSV
         summary_csv = args.output / 'invoices_summary.csv'

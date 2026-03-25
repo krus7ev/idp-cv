@@ -399,6 +399,7 @@ class TableLine(ValidatedTableLine):
                 'gross total',
                 'grand total',
                 'invoice total',
+                'line_total',
                 'total_worth',
                 'total amount',
                 'total due',

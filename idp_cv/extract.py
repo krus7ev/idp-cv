@@ -58,6 +58,9 @@ class DocumentFieldExtractor:
     Based on pydantic Field schema for key-mapping, value-parsing and post-processing
     """
 
+    # Class-level cache to share Spacy NER tags across all documents and instances
+    _ner_cache: Dict[str, List[str]] = {}
+
     def __init__(
         self,
         fields: Sequence[FieldInfo],
@@ -237,8 +240,11 @@ class DocumentFieldExtractor:
 
         elif v_type in ('name', 'address') and not is_pure_numeric:
             # Run NER on the candidate
-            doc = self.ner(clean_text)
-            ents = [ent.label_ for ent in doc.ents]
+            if clean_text not in self._ner_cache:
+                doc = self.ner(clean_text)
+                self._ner_cache[clean_text] = [ent.label_ for ent in doc.ents]
+
+            ents = self._ner_cache[clean_text]
 
             # Validation Logic
             if v_type == 'name':
