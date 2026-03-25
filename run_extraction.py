@@ -81,11 +81,6 @@ def extract_single_document(
     stem = result.input.file.stem
     doc_entry = {'Document': stem}
 
-    # Export raw JSON
-    docling_out_json = output_dir / f'{stem}_docling.json'
-    with open(docling_out_json, 'w') as f:
-        json.dump(doc.export_to_dict(), f)
-
     # Visualisation
     if do_viz:
         for page_no, page_item in doc.pages.items():
@@ -95,6 +90,15 @@ def extract_single_document(
             draw_page_items(img, doc.texts, page_no, page_item, 'blue', 2, True)
             draw_page_items(img, doc.tables, page_no, page_item, 'magenta', 4, True)
             img.save(output_dir / f'viz_{stem}_p{page_no}.png')
+
+    # Drop images from docling pages to avoid massive base64 JSON serialization bloat
+    for page_item in doc.pages.values():
+        page_item.image = None
+
+    # Export raw JSON
+    docling_out_json = output_dir / f'{stem}_docling.json'
+    with open(docling_out_json, 'w') as f:
+        json.dump(doc.export_to_dict(), f, indent=4)
 
     if do_tables:
         # Table Mapping
@@ -139,17 +143,17 @@ def extract_single_document(
 
         summ_tab_out_json = output_dir / f'{stem}_idp_cv_summary_table.json'
         with open(summ_tab_out_json, 'w') as f:
-            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['summary_table'][0]], f)
+            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['summary_table'][0]], f, indent=4)
 
     if doc_entry.get('summary'):
         summary_out_json = output_dir / f'{stem}_idp_cv_summary.json'
         with open(summary_out_json, 'w') as f:
-            json.dump(doc_entry['summary'], f)
+            json.dump(doc_entry['summary'], f, indent=4)
 
     if doc_entry.get('line_items'):
         line_tab_out_json = output_dir / f'{stem}_idp_cv_items_table.json'
         with open(line_tab_out_json, 'w') as f:
-            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['line_items'][0]], f)
+            json.dump([item.model_dump(exclude_none=True) for item in doc_entry['line_items'][0]], f, indent=4)
 
     logger.info(f'Completed: {stem}')
     return doc_entry
@@ -162,6 +166,7 @@ def process_and_extract_results(
     do_summary: bool = True,
     do_viz: bool = True,
     do_tables: bool = True,
+    do_ocr: bool = True,
 ):
     """
     Unified processing routine for docling conversion, table mapping and summary extraction.
@@ -173,11 +178,11 @@ def process_and_extract_results(
         accelerator_options=AcceleratorOptions(device=device),
         generate_page_images=do_viz,
         images_scale=2.0 if do_viz else 1.0,
-        do_ocr=True,
+        do_ocr=do_ocr,
         ocr_options=RapidOcrOptions(backend='onnxruntime' if device == 'cpu' else 'torch', print_verbose=False),
-        do_table_structure=True,
-        force_backend_text=False,
-        generate_parsed_pages=True,
+        do_table_structure=do_tables,
+        force_backend_text=True,
+        # generate_parsed_pages=True,
     )
     converter = DocumentConverter(
         format_options={
@@ -211,11 +216,8 @@ def process_and_extract_results(
 
     logger.info(f'Found {len(files_to_process)} files to process in {input_dir}')
 
-    # Choose worker count based on CPU cores, keeping room for Docling's own threads
-    max_workers = max(1, os.cpu_count() - 2)
-
+    max_workers = max(1, int(os.cpu_count() / 2))
     logger.info(f'Starting extraction with {max_workers} background workers...')
-
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_stem = {}
         final_results = []
@@ -272,6 +274,9 @@ def main():
         '--no-summary', action='store_true', help='Disable extraction of top-level invoice summary fields'
     )
     parser.add_argument(
+        '--no-ocr', action='store_true', help='Disable Fallback OCR (saves massive time for digitally searchable PDFs)'
+    )
+    parser.add_argument(
         '--device',
         type=str,
         default=None,
@@ -300,6 +305,7 @@ def main():
         device=device,
         do_summary=not args.no_summary,
         do_viz=not args.no_viz,
+        do_ocr=not args.no_ocr,
     )
 
     # Post processing and formatting

@@ -58,8 +58,9 @@ class DocumentFieldExtractor:
     Based on pydantic Field schema for key-mapping, value-parsing and post-processing
     """
 
-    # Class-level cache to share Spacy NER tags across all documents and instances
+    # Class-level caches to share data across all documents and instances
     _ner_cache: Dict[str, List[str]] = {}
+    _parse_cache: Dict[Tuple[str, str], Optional[Union[str, float]]] = {}
 
     def __init__(
         self,
@@ -189,15 +190,26 @@ class DocumentFieldExtractor:
 
     def _parse_value(self, field_name: str, value_text: str) -> Optional[Union[str, float]]:
         """
-        Parses a candidate value string based on the expected value type for the field,
-        using parsing heuristics and NER validation.
+        Retrieves the memoized parsed value, or computes it using parsing heuristics.
         """
-        v_type = self.field_value_types.get(field_name, 'string')
-
         clean_text = clean_string(value_text)
         if not clean_text or len(clean_text) < 2:
             return
 
+        v_type = self.field_value_types.get(field_name, 'string')
+        cache_key = (v_type, clean_text)
+        if cache_key in self._parse_cache:
+            return self._parse_cache[cache_key]
+
+        result = self._parse_value_heuristics(v_type, clean_text)
+        self._parse_cache[cache_key] = result
+        return result
+
+    def _parse_value_heuristics(self, v_type: str, clean_text: str) -> Optional[Union[str, float]]:
+        """
+        Parses a candidate value string based on the expected value type for the field,
+        using evaluation heuristics and NER validation.
+        """
         # 1. Label rejection: Discard value candidates containing known field labels
         for label in self.lmapper.all_aliases:
             if label.lower().strip(' :') in clean_text.lower().split():
@@ -256,13 +268,13 @@ class DocumentFieldExtractor:
                             f"      Rejected value candidate '{clean_text}' - Too long to lack {COMPANY_SUFFIXES}"
                             f" - for field of value-type '{v_type}'"
                         )
-                        return None
+                        return
                     elif has_digit:
                         logger.debug(
                             f"      Rejected value candidate '{clean_text}' - Contains digit(s)"
                             f" - for field of value-type '{v_type}'"
                         )
-                        return None
+                        return
 
                     return clean_string(clean_text, splitup=True)
                 else:
@@ -283,7 +295,7 @@ class DocumentFieldExtractor:
                                 f"      Rejected value candidate '{clean_text}' - No digit for address"
                                 f" and not enough entities in {LOC_NER_TAGS} - for value-type '{v_type}'"
                             )
-                            return None
+                            return
                     else:
                         logger.debug(
                             f"      Rejected value candidate '{clean_text}' - Failed alphanumeric regex"
@@ -299,7 +311,7 @@ class DocumentFieldExtractor:
                     f"      Rejected value candidate '{clean_text}' - Fails Regex - for field of value-type '{v_type}'"
                 )
 
-        return None
+        return
 
     def _extract_and_consume_value(
         self, field_name: str, cand_ngrams: List[str], cand_tid: int, strategy: str
