@@ -1,5 +1,5 @@
 import argparse
-import concurrent.futures
+import gc
 import json
 import logging
 import os
@@ -216,18 +216,17 @@ def process_and_extract_results(
 
     logger.info(f'Found {len(files_to_process)} files to process in {input_dir}')
 
-    max_workers = max(1, int(os.cpu_count() / 2))
-    logger.info(f'Starting extraction with {max_workers} background workers...')
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_stem = {}
-        final_results = []
-        for result in converter.convert_all(files_to_process):
-            if result.status != 'success':
-                logger.info(f'Failed: {result.input.file.name}')
-                continue
+    logger.info(f'Starting batch extraction (Docling concurrency: {settings.perf.doc_batch_concurrency})...')
+    final_results = []
 
-            future = executor.submit(
-                extract_single_document,
+    for result in converter.convert_all(files_to_process, raises_on_error=False):
+        if result.status != 'success':
+            logger.info(f'Failed: {result.input.file.name}')
+            continue
+
+        stem = result.input.file.stem
+        try:
+            doc_entry = extract_single_document(
                 result,
                 output_dir,
                 extractor,
@@ -237,17 +236,14 @@ def process_and_extract_results(
                 table_sem_mapper,
                 table_lex_mapper,
             )
-            future_to_stem[future] = result.input.file.stem
+            final_results.append(doc_entry)
+            logger.info(f'Collected extraction: {stem}')
+        except Exception as exc:
+            logger.error(f'Error processing {stem}: {exc}')
 
-        # Collect the extracted metadata as they finish in the background
-        for future in concurrent.futures.as_completed(future_to_stem):
-            stem = future_to_stem[future]
-            try:
-                doc_entry = future.result()
-                final_results.append(doc_entry)
-                logger.info(f'Collected extraction: {stem}')
-            except Exception as exc:
-                logger.error(f'Error processing {stem}: {exc}')
+        # Free heavy variables explicitly to prevent memory leaks
+        result.document = None
+        gc.collect()
 
     final_results.sort(key=lambda x: x.get('Document', ''))
     return final_results

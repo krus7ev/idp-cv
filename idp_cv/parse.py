@@ -1,6 +1,6 @@
 import logging
 import re
-from collections import defaultdict
+from collections import OrderedDict, defaultdict
 from typing import (
     Callable,
     Dict,
@@ -116,14 +116,15 @@ class LexicalMapper:
 class SemanticMapper:
     """Semantic field matcher using embedding-based similarity."""
 
-    # Class-level cache to share embeddings across all documents and instances
-    _embedding_cache: Dict[str, torch.Tensor] = {}
-
     def __init__(self, fields: Sequence[FieldInfo], model: SentenceTransformer, normalize: bool):
         """Initialize mapper with field schema."""
         self.fields = fields
         self.model = model
         self.normalize = normalize
+
+        # Instance-level bounded LRU cache for embeddings
+        self._embedding_cache: OrderedDict[str, torch.Tensor] = OrderedDict()
+        self._cache_maxsize = 200
 
         self.field_embeddings: Dict[str, List[torch.Tensor]] = {}
         self.set_embeddings()
@@ -131,10 +132,15 @@ class SemanticMapper:
     def get_embedding(self, text: str) -> torch.Tensor:
         """Compute embedding vector for input string with caching."""
         if text in self._embedding_cache:
+            self._embedding_cache.move_to_end(text)
             return self._embedding_cache[text]
 
         tensor = self.model.encode(text, convert_to_tensor=True, normalize_embeddings=self.normalize)
+
         self._embedding_cache[text] = tensor
+        if len(self._embedding_cache) > self._cache_maxsize:
+            self._embedding_cache.popitem(last=False)
+
         return tensor
 
     def set_embeddings(self) -> None:

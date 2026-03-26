@@ -1,6 +1,6 @@
 import logging
 import re
-from collections import defaultdict
+from collections import OrderedDict, defaultdict
 from typing import (
     Dict,
     List,
@@ -58,10 +58,6 @@ class DocumentFieldExtractor:
     Based on pydantic Field schema for key-mapping, value-parsing and post-processing
     """
 
-    # Class-level caches to share data across all documents and instances
-    _ner_cache: Dict[str, List[str]] = {}
-    _parse_cache: Dict[Tuple[str, str], Optional[Union[str, float]]] = {}
-
     def __init__(
         self,
         fields: Sequence[FieldInfo],
@@ -76,6 +72,11 @@ class DocumentFieldExtractor:
         self.ner = ner
         self.threshold = threshold
 
+        # Instance-level bounded LRU caches
+        self._cache_maxsize = 200
+        self._ner_cache: OrderedDict[str, List[str]] = OrderedDict()
+        self._parse_cache: OrderedDict[Tuple[str, str], Optional[Union[str, float]]] = OrderedDict()
+
         self.field_value_types: Dict[str, str] = {}
         self._set_summary_field_value_types()
         self.text_data_buffer: Dict[int, str] = {}
@@ -85,7 +86,7 @@ class DocumentFieldExtractor:
         text: str, n_max: int = 3, include_full: bool = False, start=False, reverse: bool = False
     ) -> List[str]:
         """Generate n-grams starting from the first token of the text."""
-        # Clean naively (without extra splitup=True parameter), taking care only of colons
+        # Clean naively (no splitup=True param), take care of colons only
         clean_text = clean_string(text)
         space_split = clean_text.split()
         tokens = []
@@ -97,7 +98,6 @@ class DocumentFieldExtractor:
                     tokens.append(colon_split[-1])
             else:
                 tokens.append(token)
-
         clean_text = ' '.join(tokens)
 
         ngrams: List[str] = []
@@ -174,7 +174,7 @@ class DocumentFieldExtractor:
         """Initializes and populates the text buffer, removing identified field keys."""
         texts = getattr(doc, 'texts', [])
         self.text_data_buffer = {i: texts[i].text for i in range(len(texts))}
-        # for field_ngram, (_, locations) in fields_by_ngram.items():
+
         for field_ngram, locations in fields_map.values():
             for _, tid in locations:
                 if tid not in self.text_data_buffer:
@@ -189,9 +189,7 @@ class DocumentFieldExtractor:
                     del self.text_data_buffer[tid]
 
     def _parse_value(self, field_name: str, value_text: str) -> Optional[Union[str, float]]:
-        """
-        Retrieves the memoized parsed value, or computes it using parsing heuristics.
-        """
+        """Retrieves the memoized parsed value, or computes it using parsing heuristics."""
         clean_text = clean_string(value_text)
         if not clean_text or len(clean_text) < 2:
             return
@@ -199,30 +197,27 @@ class DocumentFieldExtractor:
         v_type = self.field_value_types.get(field_name, 'string')
         cache_key = (v_type, clean_text)
         if cache_key in self._parse_cache:
+            self._parse_cache.move_to_end(cache_key)
             return self._parse_cache[cache_key]
 
         result = self._parse_value_heuristics(v_type, clean_text)
         self._parse_cache[cache_key] = result
+        if len(self._parse_cache) > self._cache_maxsize:
+            self._parse_cache.popitem(last=False)
         return result
 
     def _parse_value_heuristics(self, v_type: str, clean_text: str) -> Optional[Union[str, float]]:
-        """
-        Parses a candidate value string based on the expected value type for the field,
-        using evaluation heuristics and NER validation.
-        """
-        # 1. Label rejection: Discard value candidates containing known field labels
+        """Parses candidate values based on value_type via heuristics and NER validation."""
         for label in self.lmapper.all_aliases:
             if label.lower().strip(' :') in clean_text.lower().split():
                 logger.debug(f"      Rejected value candidate '{clean_text}' - contains alias '{label}'")
                 return
 
-        # 2. Label rejection: Do not pick up labels as values
         lex_match, lex_score = self.lmapper.map_field(clean_text)[0]
         if lex_match and lex_score > 0.8:
             logger.debug(f"      Rejected value candidate '{clean_text}' - matches '{lex_match}' field by {lex_score}")
             return
 
-        # 3. Parse or reject numeric values based on expected value type
         has_digit = any(c.isdigit() for c in clean_text)
         is_pure_numeric = bool(RE_IS_PURE_NUMERIC.fullmatch(clean_text))
         num_parse = TableLine.parse_numeric(clean_text)
@@ -234,9 +229,7 @@ class DocumentFieldExtractor:
             return
 
         if v_type == 'id':
-            # Validate as an identifier: Alphanumeric with common delimiters
             if re.fullmatch(RE_ID_ALPHANUMERIC, clean_text, re.IGNORECASE):
-                # Ensure it's not JUST spaces or punctuation
                 if has_digit and len(text_tokens) <= 2:
                     if len([c for c in clean_text if c.isdigit()]) > 3:
                         return clean_text
@@ -251,14 +244,16 @@ class DocumentFieldExtractor:
                 return
 
         elif v_type in ('name', 'address') and not is_pure_numeric:
-            # Run NER on the candidate
             if clean_text not in self._ner_cache:
                 doc = self.ner(clean_text)
                 self._ner_cache[clean_text] = [ent.label_ for ent in doc.ents]
+                if len(self._ner_cache) > self._cache_maxsize:
+                    self._ner_cache.popitem(last=False)
+            else:
+                self._ner_cache.move_to_end(clean_text)
 
             ents = self._ner_cache[clean_text]
 
-            # Validation Logic
             if v_type == 'name':
                 if all(ent in NAME_NER_TAGS for ent in ents):
                     if len(text_tokens) > 3 and not any(
@@ -317,8 +312,8 @@ class DocumentFieldExtractor:
         self, field_name: str, cand_ngrams: List[str], cand_tid: int, strategy: str
     ) -> Optional[Union[str, float]]:
         """Common logic to generate n-grams, parse value, and consume from buffer."""
-
         logger.debug(f'    - Strategy {strategy} ngram candidates: {cand_ngrams}')
+
         for ngram in cand_ngrams:
             parsed = self._parse_value(field_name, ngram)
             if parsed is not None:
@@ -326,11 +321,12 @@ class DocumentFieldExtractor:
 
                 pattern = self._get_bounded_regex_pattern(ngram)
 
-                self.text_data_buffer[cand_tid] = re.sub(
-                    pattern, '', self.text_data_buffer[cand_tid], count=1, flags=re.IGNORECASE
-                ).strip()
-                if not self.text_data_buffer[cand_tid]:
-                    del self.text_data_buffer[cand_tid]
+                if cand_tid in self.text_data_buffer:
+                    self.text_data_buffer[cand_tid] = re.sub(
+                        pattern, '', self.text_data_buffer[cand_tid], count=1, flags=re.IGNORECASE
+                    ).strip()
+                    if not self.text_data_buffer[cand_tid]:
+                        self.text_data_buffer.pop(cand_tid)
 
                 return parsed
         return None
@@ -344,7 +340,6 @@ class DocumentFieldExtractor:
 
         parts = re.split(re.escape(field_ngram), original_text, flags=re.IGNORECASE)
         cand_text = clean_string(parts[-1]) if len(parts) > 1 else ''
-
         if cand_text:
             cand_start_ngrams = self._process_text_ngrams(
                 cand_text, n_max=6, include_full=True, start=True, reverse=True
@@ -370,7 +365,7 @@ class DocumentFieldExtractor:
         if not key_bbox:
             return None
 
-        # Search within the SAME group defined by Docling
+        # Search within the same Docling group
         group_cands = []
         for neighbor_tid, _ in candidates[key_group]:
             if neighbor_tid == key_tid or neighbor_tid not in self.text_data_buffer:
@@ -417,7 +412,6 @@ class DocumentFieldExtractor:
         missing_fields = [
             f for f, t in self.field_value_types.items() if (f not in mapped_data and t not in ignore_types)
         ]
-        # Process missing fields in reverse order
         if reverse is True:
             missing_fields.reverse()
 
@@ -429,7 +423,7 @@ class DocumentFieldExtractor:
 
     def _extract_orphan_value(self, field_name: str) -> Optional[Union[str, float]]:
         """Strategy C: Orphan Remainder Recovery from unused text buffer."""
-        for tid, remaining_text in self.text_data_buffer.items():
+        for tid, remaining_text in list(self.text_data_buffer.items()):
             if not remaining_text:
                 continue
             cand_ngrams = self._process_text_ngrams(remaining_text, n_max=6, include_full=True, reverse=True)
@@ -505,13 +499,8 @@ class DocumentFieldExtractor:
             if group_texts:
                 candidates.append(self._process_key_candidate_ngrams(group_texts))
 
-        # Consider all other orphans texts
-        orphan_texts = []
-        for text in texts:
-            if id(text) not in processed_texts:
-                orphan_texts.append(text)
-
         # Treat orphans as an extra group
+        orphan_texts = [t for t in texts if id(t) not in processed_texts]
         if orphan_texts:
             candidates.append(self._process_key_candidate_ngrams(orphan_texts))
 
